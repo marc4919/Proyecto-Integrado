@@ -1,6 +1,5 @@
 <?php
-include('Conexion.php');
-class Provincia extends Conexion  implements ViewInterface
+class Test extends Conexion
 {
     function get($id = null)
     {
