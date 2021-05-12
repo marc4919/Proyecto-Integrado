@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Proyecto-Integrado</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <style>
+
+            #caja{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin: 2px;
+            }
+
+            #caja2{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin: 2px;
+            }
+
+            #caja3{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                margin: 2px;
+            }
+
+            #contenedor{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                border-radius: 20px;
+                padding: 20px;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            #almacen{
+                width: 400px;
+                height: 400px;
+                border: 1px solid black;
+                border-radius: 20px;
+                padding: 20px;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+        <div id="caja" draggable="true"></div>
+        <div id="contenedor"><h1>Contenedor</h1></div>
+        <div id="almacen"><h1>Almacen</h1></div>
+        <script>
+            caja = document.getElementById('caja');
+            caja.addEventListener('dragstart', e =>{
+                console.log('Drag Start');
+            });
+            contenedor = document.getElementById('contenedor');
+            contenedor.addEventListener('dragover', e =>{
+                e.preventDefault();
+            });
+            contenedor.addEventListener('drop', e =>{
+                contenedor.appendChild(caja);
+
+            });
+            almacen = document.getElementById('almacen');
+            almacen.addEventListener('dragover', e =>{
+                e.preventDefault();
+
+            });
+            almacen.addEventListener('drop', e =>{
+                almacen.appendChild(caja);
+                e.stopPropagation();
+            });
+        </script>
+
+    </body>
+</html>
