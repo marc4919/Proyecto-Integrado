@@ -31,7 +31,7 @@ abstract class Conexion
             $this->conn = new mysqli($this->host, $this->userName, $this->password, $this->db);
             if ($this->conn->connect_error) {
                 die("Connection failed: " . $this->conn->connect_error);
-            }
+            }else echo "OK";
         }
     }
 }
