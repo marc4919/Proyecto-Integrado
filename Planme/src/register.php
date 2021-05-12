@@ -21,13 +21,16 @@ class register extends User
 
     public function verficacion($correo, $Nombre)
     {
-        $verificacion_email = ("SELECT * FROM usuario where Correo ='$correo' or  Nombre='$Nombre'");
-        return $this->conn->query($verificacion_email);
-        if (mysqli_num_rows($verificacion_email) > 0) {
+        $verificacion_email = "SELECT * FROM usuario where Correo ='$correo' or  Nombre='$Nombre'";
+        $Consulta = $this->conn->query($verificacion_email);
+        return $Consulta;
+
+
+        if (mysqli_num_rows($Consulta) > 0) {
             echo '
             <script>
                 alert("Uno de los campos ya ha sido registrado (email o usuario)");
-                window.location=  "../proyecto.php";
+                window.location=  "../index.phpp";
             </script>
             ';
             exit(); //Imprime el mensaje y acaba el script actual

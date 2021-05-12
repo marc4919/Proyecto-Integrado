@@ -1,6 +1,4 @@
 <?php
-session_start();
-include 'Conexion.php';
 class login extends User
 {
 
@@ -10,23 +8,25 @@ class login extends User
         $Contrasena = $_POST['Password'];
 
 
-        $login_validator = mysqli_query("SELECT * from usuario where Correo$Correo and Password=$Contrasena");
+        $login_validator = ("SELECT * from usuario where Correo='$Correo' and Password='$Contrasena'");
+        $Consulta = $this->conn->query($login_validator);
+        return $Consulta;
 
-        if (mysqli_num_rows($login_validator) > 0) {
+        if (mysqli_num_rows($Consulta) > 0) {
 
-            $_SESSION['Correo'] = $Correo; //Varialbe de session para que se quede almacenada en la caché 
-            header("location: /Miproyecto/trabajoleng/menu1/index.php"); //Si necuentra al usuario accde a la web 
+            $_SESSION['Correo'] = $Correo; //Variable de session para que se quede almacenada en la caché 
+            header("location: "); //Si necuentra al usuario accde a la web 
             echo
             '<script>
                     alert("Ha iniciado sesion");
-                    window.location= "/Miproyecto/trabajoleng/menu1/index.php";
+                    window.location= "";
                 </script>
             ';
         } else { //Si no lo encuantra vuelve a la pagina donde se inicia sesion 
             echo
             '<script>
                     alert("SU USUARIO NO EXISTE, COMPRUEBE LOS DATOS INTRODUCIDOS"); 
-                    window.location= "../proyecto.php";
+                    window.location= "../index.php";
                 </script>
             ';
             exit();
