@@ -7,6 +7,11 @@
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
+
+
+CREATE DATABASE planme;
+USE planme;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -63,17 +68,6 @@ CREATE TABLE `usuario` (
   `Tipo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`ID_Usuario`, `Nombre`, `Correo`, `Password`, `Tipo`) VALUES
-(10, 'NSJFNSJD', 'JDAWNJDN', 'KASD', NULL),
-(11, 'WEIORHWIOEU', 'SKFNER', 'DIVDNFG', NULL),
-(12, 'Antonio', 'Correo', 'Contraseña', NULL),
-(13, 'WEIORHWIOEU', 'SKFNER', 'DIVDNFG', NULL),
-(14, 'Antoniovdsv', 'Correovsdv', 'w4ijrio34', NULL),
-(15, 'Pepe', 'joefnwefn', 'erkrfekwrfn', NULL);
 
 --
 -- Índices para tablas volcadas
