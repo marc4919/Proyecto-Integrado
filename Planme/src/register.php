@@ -1,6 +1,6 @@
 <?php
 
-class register extends Conexion
+class register extends User
 {
 
     public function Registro()
@@ -9,12 +9,11 @@ class register extends Conexion
         $Nombre = $_POST['Nombre'];
         $correo = $_POST['Correo'];
         $contrasena = $_POST['Password'];
-        echo $Nombre;
-        echo $correo;
+
         // $contrasena = hash('sha512', $contrasena); //Encrptacion de la contraseña
 
         //Creamos una query para almacenar los datos en la base de datos 
-        echo $this->conn->error;
+
         $sql = "INSERT INTO usuario (Nombre, Correo, Password) VALUES ('" . $Nombre . "' ,'" . $correo . "','" . $contrasena . "')";
         echo "</br>";
         echo $sql;
