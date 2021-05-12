@@ -13,13 +13,13 @@
 
 <body>
 
-    <!--FORMULARIO RESGISTRO-->
-    <form action="regis.php" method="post" class="formulario__register">
-        <h2>Registrarse</h2>
-        <input type="text" placeholder="Nombre Completo" name="Nombre" required>
-        <input type="text" placeholder="Correo electronico" name="Correo" required>
-        <input type="password" placeholder="Contraseña" name="Password" required>
-        <button>Resgistrate</button>
+    <!--FORMULARIO Login-->
+    <form action="log.php" method="post" class="formulario__login">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" placeholder="Correo" name="Correo" required>
+        <!--type mail? MGT-->
+        <input type="password" placeholder="Contraseña" name=" Password" required>
+        <button>Sesión</button>
     </form>
     </div>
     </div>

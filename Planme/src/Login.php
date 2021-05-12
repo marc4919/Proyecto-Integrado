@@ -2,24 +2,25 @@
 class login extends User
 {
 
-    public function Login($Correo, $Contrasena)
+    public function inicio()
     {
         $Correo = $_POST['Correo'];
         $Contrasena = $_POST['Password'];
 
 
         $login_validator = ("SELECT * from usuario where Correo='$Correo' and Password='$Contrasena'");
+        echo $login_validator;
         $Consulta = $this->conn->query($login_validator);
-        return $Consulta;
+        echo $this->conn->error;
 
         if (mysqli_num_rows($Consulta) > 0) {
 
             $_SESSION['Correo'] = $Correo; //Variable de session para que se quede almacenada en la caché 
-            header("location: "); //Si necuentra al usuario accde a la web 
+            header("location: test.html"); //Si necuentra al usuario accde a la web 
             echo
             '<script>
                     alert("Ha iniciado sesion");
-                    window.location= "";
+                    window.location= "test.html";
                 </script>
             ';
         } else { //Si no lo encuantra vuelve a la pagina donde se inicia sesion 
