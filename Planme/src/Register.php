@@ -30,7 +30,7 @@ class register extends User
             echo '
             <script>
                 alert("Uno de los campos ya ha sido registrado (email o usuario)");
-                window.location=  "../index.phpp";
+                window.location=  "../index.php";
             </script>
             ';
             exit(); //Imprime el mensaje y acaba el script actual
