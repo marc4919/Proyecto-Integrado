@@ -1,11 +1,3 @@
-<?php
-require_once "autoloader.php";
-$obje = new register();
-$obje->Registro();
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,19 +12,17 @@ $obje->Registro();
 </head>
 
 <body>
-   
-             <!--FORMULARIO RESGISTRO-->
-                <form action="../src/Register.php" method="post" class="formulario__register">
-                    <h2>Registrarse</h2>
-                    <input type="text" placeholder="Nombre Completo" name="Nombre" required>
-                    <input type="text" placeholder="Correo electronico" name="correo" required>
-                    <input type="text" placeholder="Nombre Usuario" name="Usuario" required>
-                    <input type="text" placeholder="Tipo Usuario" name="Tipo" required>
-                    <input type="password" placeholder="Contraseña" name=" Password" required>
-                    <button>Resgistrate</button>
-                </form>
-            </div>
-        </div>
+
+    <!--FORMULARIO RESGISTRO-->
+    <form action="regis.php" method="post" class="formulario__register">
+        <h2>Registrarse</h2>
+        <input type="text" placeholder="Nombre Completo" name="Nombre" required>
+        <input type="text" placeholder="Correo electronico" name="Correo" required>
+        <input type="password" placeholder="Contraseña" name=" Password" required>
+        <button>Resgistrate</button>
+    </form>
+    </div>
+    </div>
     </main>
     <script src="js/RegisterLogin.js"></script>
 </body>
