@@ -1,26 +1,27 @@
 <?php class Plan extends Conexion
 {
-    private $User;
-    private $Password;
-    private $Correo;
+    private $id;
+    private $Creador;
     private $Nombre;
-    private $Tipo;
+    private $Descripcion;
+    private $Localizacion;
+    private $Transporte;
+    private $Precio;
+    private $Categoria1;
+    private $Categoria2;
 
-    public function __construct($User = "", $Password = "", $Correo = "", $Nombre = "", $Tipo = "")
+
+    public function __construct($id = "", $Creador = "", $Nombre = "", $Descripcion = "", $Localizacion = "", $Transporte = "", $Precio = "", $Categoria1 = "", $Categoria2 = "",)
     {
         parent::__construct();
-        $this->user = $User;
-        $this->Password = $Password;
-        $this->Correo = $Correo;
+        $this->id = $id;
+        $this->Creador = $Creador;
         $this->Nombre = $Nombre;
-        $this->Tipo = $Tipo;
-    }
-
-    public function Cambiar_Nombre()
-    {
-    }
-
-    public function Cambiar_Correo()
-    {
+        $this->Descripcion = $Descripcion;
+        $this->Localizacion = $Localizacion;
+        $this->Transporte = $Transporte;
+        $this->Precio = $Precio;
+        $this->Categoria1 = $Categoria1;
+        $this->Categoria2 = $Categoria2;
     }
 }
