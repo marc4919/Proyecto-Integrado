@@ -30,6 +30,8 @@
   <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
   <a href="#"><i class="fa fa-fw fa-user"></i> Exit</a>
 </div>
+<a href="http://localhost/Proyecto-Integrado/Planme/public/perfil.php">HOLA</a>
+
 
     <?php
     require_once "autoloader.php";
