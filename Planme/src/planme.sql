@@ -41,7 +41,7 @@ CREATE TABLE `planes` (
   `Transporte` varchar(30) NOT NULL,
   `Categoria_Principal` varchar(20) NOT NULL,
   `Categoria_Secundaria` varchar(20) NOT NULL,
-  `Precio` varchar(30) NOT NULL
+  `Precio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
