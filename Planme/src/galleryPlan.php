@@ -3,9 +3,11 @@
 class galleryPlan extends Plan
 {
 
+    // AÑADIR AJAX PARA EVITAR RECARGA DE PÁGINA
     public function getPlans()
     {
-        $sql = "SELECT * FROM planes";
+        $number = rand(1, 24);
+        $sql = "SELECT * FROM planes where ID_PLAN = " . $number;
         $result = $this->conn->query($sql);
         return $result;
     }
@@ -17,21 +19,23 @@ class galleryPlan extends Plan
 
     public function showPlans()
     {
-        $result = $this->getPlans();
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo "<hr/>";
-                echo "<p>" . $row["Nombre"] . "</p>";
-                echo "<p>" . $row["Descripcion"] . "</p>";
-                echo "<p>" . $row["Localizacion"] . "</p>";
-                echo "<p>" . $row["Transporte"] . "</p>";
-                echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
-                  
+        for ($i = 0; $i <= 2; $i++) {
+            $result = $this->getPlans();
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div>";
+                    echo "<p>" . $row["Nombre"] . "</p>";
+                    //echo "<p>" . $row["Descripcion"] . "</p>";
+                    echo "<p>" . $row["Localizacion"] . "</p>";
+                    echo "<p>" . $row["Transporte"] . "</p>";
+                    //echo "<p>" . $row["Categoria_Principal"] . "</p>";
+                    //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
+                    echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
+                    echo "</div>";
+                }
+            } else {
+                echo "no hay resultados";
             }
-        } else {
-            echo "no hay resultados";
         }
     }
 
