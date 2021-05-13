@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="../Miproyecto/css/estilos.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        div {
+            position: relative;
+            float: left;
+            border: 2px black solid;
+            margin: 5px;
+            padding: 5px;
+            width: 400px;
+            height: 252px;
+        }
+    </style>
 </head>
 
 <body>
