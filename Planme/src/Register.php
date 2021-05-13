@@ -6,17 +6,18 @@ class register extends User
     public function Registro()
     {
 
-        $ID_Usuario = $_POST['ID_Usuario'];
         $Nombre = $_POST['Nombre'];
         $correo = $_POST['Correo'];
         $contrasena = $_POST['Password'];
-        $tipo = $_POST['Tipo'];
+
         // $contrasena = hash('sha512', $contrasena); //Encrptacion de la contraseña
 
         //Creamos una query para almacenar los datos en la base de datos 
-        $sql = $this->conn->prepare("INSERT INTO usuario (ID_Usuario, Nombre, Correo, Password,Tipo) VALUES (?,?,?,?)");
-        $sql->bind_param("isss", $ID_Usuario, $Nombre, $correo, $contrasena, $tipo);
-        $sql->execute();
+
+        $sql = "INSERT INTO usuario (Nombre, Correo, Password) VALUES ('" . $Nombre . "' ,'" . $correo . "','" . $contrasena . "')";
+        echo "</br>";
+        echo $sql;
+        $this->conn->query($sql);
     }
 
     public function verficacion($correo, $Nombre)

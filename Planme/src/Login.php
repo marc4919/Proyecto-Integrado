@@ -1,5 +1,5 @@
 <?php
-class login extends User
+class Login extends User
 {
 
     public function inicio()

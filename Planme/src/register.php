@@ -1,8 +1,8 @@
 <?php
 
-class register extends User
+class Registro extends User
 {
-
+    // MEJORA POSIBLE - QUE NO SE PUEDAN REGISTRAR 2 USUARIOS IGUALES - MGT
     public function Registro()
     {
 
