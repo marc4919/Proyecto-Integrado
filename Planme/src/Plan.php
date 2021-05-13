@@ -11,7 +11,7 @@
     private $Categoria2;
 
 
-    public function __construct($id = "", $Creador = "", $Nombre = "", $Descripcion = "", $Localizacion = "", $Transporte = "", $Precio = "", $Categoria1 = "", $Categoria2 = "",)
+    public function __construct($id = "", $Creador = "", $Nombre = "", $Descripcion = "", $Localizacion = "", $Transporte = "", $Precio = "", $Categoria1 = "", $Categoria2 = "")
     {
         parent::__construct();
         $this->id = $id;
