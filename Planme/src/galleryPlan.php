@@ -10,6 +10,11 @@ class galleryPlan extends Plan
         return $result;
     }
 
+    public function formatoMoneda($valor)
+    {
+        return number_format($valor, 2, ",", ".") . "€";
+    }
+
     public function showPlans()
     {
         $result = $this->getPlans();
@@ -18,6 +23,12 @@ class galleryPlan extends Plan
                 echo "<hr/>";
                 echo "<p>" . $row["Nombre"] . "</p>";
                 echo "<p>" . $row["Descripcion"] . "</p>";
+                echo "<p>" . $row["Localizacion"] . "</p>";
+                echo "<p>" . $row["Transporte"] . "</p>";
+                echo "<p>" . $row["Categoria_Principal"] . "</p>";
+                echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
+                echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
+                  
             }
         } else {
             echo "no hay resultados";
