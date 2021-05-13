@@ -1,14 +1,18 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1
--- Tiempo de generación: 12-05-2021 a las 09:07:16
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.2
+-- Servidor: localhost
+-- Tiempo de generación: 12-05-2021 a las 21:02:19
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.10
+
+
+
+CREATE DATABASE planme;
+USE planme;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -64,8 +68,9 @@ CREATE TABLE `usuario` (
   `Nombre` varchar(20) NOT NULL,
   `Correo` varchar(20) NOT NULL,
   `Password` varchar(20) NOT NULL,
-  `Tipo` int(11) NOT NULL
+  `Tipo` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 --
 -- Índices para tablas volcadas
@@ -102,33 +107,27 @@ ALTER TABLE `planes`
   MODIFY `ID_PLAN` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `relacion`
---
-ALTER TABLE `relacion`
-  MODIFY `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
+-- Filtros para la tabla `planes`
+--
+ALTER TABLE `planes`
+  ADD CONSTRAINT `planes_ibfk_1` FOREIGN KEY (`ID_Creador`) REFERENCES `usuario` (`ID_Usuario`);
+
+--
 -- Filtros para la tabla `relacion`
 --
 ALTER TABLE `relacion`
-  ADD CONSTRAINT `relacion_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`) ON DELETE NO ACTION,
+  ADD CONSTRAINT `relacion_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
   ADD CONSTRAINT `relacion_ibfk_2` FOREIGN KEY (`ID_PLAN`) REFERENCES `planes` (`ID_PLAN`);
-
---
--- Filtros para la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `planes` (`ID_Creador`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

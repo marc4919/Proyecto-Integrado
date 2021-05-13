@@ -6,9 +6,9 @@
     private $Nombre;
     private $Tipo;
 
-    public function __construct($User="", $Password="", $Correo="", $Nombre="", $Tipo="")
+    public function __construct($User = "", $Password = "", $Correo = "", $Nombre = "", $Tipo = "")
     {
-
+        parent::__construct();
         $this->user = $User;
         $this->Password = $Password;
         $this->Correo = $Correo;
