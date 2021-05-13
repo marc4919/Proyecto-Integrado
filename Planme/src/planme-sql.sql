@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-05-2021 a las 09:54:23
+-- Tiempo de generación: 13-05-2021 a las 10:30:07
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.33
 
@@ -39,6 +39,32 @@ CREATE TABLE `planes` (
   `Precio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `relacion`
+--
+
+CREATE TABLE `relacion` (
+  `ID_Usuario` int(11) NOT NULL,
+  `ID_PLAN` int(11) NOT NULL,
+  `Horario` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuario`
+--
+
+CREATE TABLE `usuario` (
+  `ID_Usuario` int(11) NOT NULL,
+  `Nombre` varchar(20) NOT NULL,
+  `Correo` varchar(20) NOT NULL,
+  `Password` varchar(20) NOT NULL,
+  `Tipo` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tablas volcadas
 --
@@ -51,6 +77,19 @@ ALTER TABLE `planes`
   ADD KEY `ID_Creador` (`ID_Creador`);
 
 --
+-- Indices de la tabla `relacion`
+--
+ALTER TABLE `relacion`
+  ADD PRIMARY KEY (`ID_Usuario`,`ID_PLAN`),
+  ADD KEY `ID_PLAN` (`ID_PLAN`);
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`ID_Usuario`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -61,6 +100,12 @@ ALTER TABLE `planes`
   MODIFY `ID_PLAN` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  MODIFY `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -69,6 +114,13 @@ ALTER TABLE `planes`
 --
 ALTER TABLE `planes`
   ADD CONSTRAINT `planes_ibfk_1` FOREIGN KEY (`ID_Creador`) REFERENCES `usuario` (`ID_Usuario`);
+
+--
+-- Filtros para la tabla `relacion`
+--
+ALTER TABLE `relacion`
+  ADD CONSTRAINT `relacion_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`),
+  ADD CONSTRAINT `relacion_ibfk_2` FOREIGN KEY (`ID_PLAN`) REFERENCES `planes` (`ID_PLAN`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
