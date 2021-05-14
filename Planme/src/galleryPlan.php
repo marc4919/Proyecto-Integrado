@@ -29,7 +29,8 @@ class galleryPlan extends Plan
                         $i--;
                     } else {
 
-                        echo "<div>";
+                        echo "<div class= 'cajaPlan'>";
+                        echo "<p hidden class= 'idPlan'>" . $row["ID_PLAN"] . "</p>";
                         echo "<p>" . $row["Nombre"] . "</p>";
                         //echo "<p>" . $row["Descripcion"] . "</p>";
                         echo "<p>" . $row["Localizacion"] . "</p>";
@@ -37,6 +38,7 @@ class galleryPlan extends Plan
                         //echo "<p>" . $row["Categoria_Principal"] . "</p>";
                         //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
                         echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
+                        echo "</p>";
                         echo "</div>";
                         array_push($planesAparecidos, $row["Nombre"]);
                     }
@@ -103,7 +105,11 @@ class galleryPlan extends Plan
         }
     }
 
-    public function savePlans()
+    public function savePlans($id)
     {
+        /* $sql = "INSERT INTO relacion (ID_Usuario, ID_PLAN, Horario) VALUES ('" . $Nombre . "' ,'" . $correo . "','" . $contrasena . "')";
+        echo "</br>";
+        echo $sql;
+        $this->conn->query($sql); */
     }
 }

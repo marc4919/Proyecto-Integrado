@@ -9,7 +9,9 @@ function main() {
   xhttp.addEventListener("readystatechange", function () {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       gP.innerHTML = xhttp.responseText;
+      botonGuardar();
       refresh();
+      botonGuardar();
     }
   });
   xhttp.open("GET", "mostrarGaleria.php", true);
@@ -23,4 +25,21 @@ function refresh() {
     e.stopPropagation();
     main();
   });
+}
+
+function botonGuardar() {
+  let cajaPlan = document.getElementsByClassName("cajaPlan");
+  let idPlan = document.getElementsByClassName("idPlan");
+  for (let i = 0; i < idPlan.length; i++) {
+    cajaPlan[i].addEventListener("click", function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      let identificador = idPlan[i].innerHTML;
+      guardar(identificador);
+    });
+  }
+}
+
+function guardar(identificador) {
+  console.log(identificador);
 }
