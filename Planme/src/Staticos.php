@@ -7,6 +7,11 @@ class Staticos{
         return number_format($valor, 2, ",", ".") . "€";
     }
 
+    public static function Date($time){
+
+        $time = time();
+        echo date("d-m-Y (H:i:s)", $time);
+    }
 }
 
 
