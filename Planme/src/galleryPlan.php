@@ -2,7 +2,7 @@
 
 class galleryPlan extends Plan
 {
-    
+
     // AÑADIR AJAX PARA EVITAR RECARGA DE PÁGINA
     public function getPlans()
     {
@@ -33,22 +33,11 @@ class galleryPlan extends Plan
                         echo "<p>" . $row["Transporte"] . "</p>";
                         //echo "<p>" . $row["Categoria_Principal"] . "</p>";
                         //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                        echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
+                        echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
                         echo "</p>";
                         echo "</div>";
                         array_push($planesAparecidos, $row["Nombre"]);
                     }
-
-                    echo "<div>";
-                    echo "<p>" . $row["Nombre"] . "</p>";
-                    //echo "<p>" . $row["Descripcion"] . "</p>";
-                    echo "<p>" . $row["Localizacion"] . "</p>";
-                    echo "<p>" . $row["Transporte"] . "</p>";
-                    //echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                    //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                    echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
-                    echo "</div>";
-
                 }
             } else {
                 echo "no hay resultados";
