@@ -2,19 +2,14 @@
 
 class galleryPlan extends Plan
 {
-
-    // AÑADIR AJAX PARA EVITAR RECARGA DE PÁGINA - MGT
+    
+    // AÑADIR AJAX PARA EVITAR RECARGA DE PÁGINA
     public function getPlans()
     {
         $number = rand(1, 24);
         $sql = "SELECT * FROM planes where ID_PLAN = " . $number;
         $result = $this->conn->query($sql);
         return $result;
-    }
-
-    public function formatoMoneda($valor)
-    {
-        return number_format($valor, 2, ",", ".") . "€";
     }
 
     public function showPlans()
@@ -25,21 +20,15 @@ class galleryPlan extends Plan
             $result = $this->getPlans();
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    if (in_array($row["Nombre"], $planesAparecidos)) {
-                        $i--;
-                    } else {
-
-                        echo "<div>";
-                        echo "<p>" . $row["Nombre"] . "</p>";
-                        //echo "<p>" . $row["Descripcion"] . "</p>";
-                        echo "<p>" . $row["Localizacion"] . "</p>";
-                        echo "<p>" . $row["Transporte"] . "</p>";
-                        //echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                        //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                        echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
-                        echo "</div>";
-                        array_push($planesAparecidos, $row["Nombre"]);
-                    }
+                    echo "<div>";
+                    echo "<p>" . $row["Nombre"] . "</p>";
+                    //echo "<p>" . $row["Descripcion"] . "</p>";
+                    echo "<p>" . $row["Localizacion"] . "</p>";
+                    echo "<p>" . $row["Transporte"] . "</p>";
+                    //echo "<p>" . $row["Categoria_Principal"] . "</p>";
+                    //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
+                    echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
+                    echo "</div>";
                 }
             } else {
                 echo "no hay resultados";
@@ -92,7 +81,7 @@ class galleryPlan extends Plan
                         echo "<p>" . $row["Transporte"] . "</p>";
                         //echo "<p>" . $row["Categoria_Principal"] . "</p>";
                         //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                        echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
+                        echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
                         echo "</div>";
                         array_push($planesAparecidos, $row["Nombre"]);
                     }
