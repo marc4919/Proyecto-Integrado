@@ -14,8 +14,18 @@ class Login extends User
         echo $this->conn->error;
 
         if (mysqli_num_rows($Consulta) > 0) {
+
             session_start();
-            $_SESSION['Correo'] = $Correo; //Variable de session para que se quede almacenada en la caché 
+            if ($Consulta->num_rows > 0) {
+                while ($row = $Consulta->fetch_assoc()) { {
+                        $_SESSION['Correo'] = $Correo;
+                        $_SESSION['Usuario'] = $row["ID_Usuario"];
+                    }
+                }
+            } else {
+                echo "no hay resultados";
+            }
+            //Variable de session para que se quede almacenada en la caché 
             header("location: perfil.php"); //Si necuentra al usuario accde a la web 
             echo
             '<script>

@@ -20,6 +20,25 @@ class galleryPlan extends Plan
             $result = $this->getPlans();
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
+
+                    if (in_array($row["Nombre"], $planesAparecidos)) {
+                        $i--;
+                    } else {
+
+                        echo "<div class= 'cajaPlan'>";
+                        echo "<p hidden class= 'idPlan'>" . $row["ID_PLAN"] . "</p>";
+                        echo "<p>" . $row["Nombre"] . "</p>";
+                        //echo "<p>" . $row["Descripcion"] . "</p>";
+                        echo "<p>" . $row["Localizacion"] . "</p>";
+                        echo "<p>" . $row["Transporte"] . "</p>";
+                        //echo "<p>" . $row["Categoria_Principal"] . "</p>";
+                        //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
+                        echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
+                        echo "</p>";
+                        echo "</div>";
+                        array_push($planesAparecidos, $row["Nombre"]);
+                    }
+
                     echo "<div>";
                     echo "<p>" . $row["Nombre"] . "</p>";
                     //echo "<p>" . $row["Descripcion"] . "</p>";
@@ -29,6 +48,7 @@ class galleryPlan extends Plan
                     //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
                     echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
                     echo "</div>";
+
                 }
             } else {
                 echo "no hay resultados";
@@ -92,7 +112,11 @@ class galleryPlan extends Plan
         }
     }
 
-    public function savePlans()
+    public function savePlans($id)
     {
+        /* $sql = "INSERT INTO relacion (ID_Usuario, ID_PLAN, Horario) VALUES ('" . $Nombre . "' ,'" . $correo . "','" . $contrasena . "')";
+        echo "</br>";
+        echo $sql;
+        $this->conn->query($sql); */
     }
 }
