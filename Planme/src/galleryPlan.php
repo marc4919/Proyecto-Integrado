@@ -2,7 +2,7 @@
 
 class galleryPlan extends Plan
 {
-
+    
     // AÑADIR AJAX PARA EVITAR RECARGA DE PÁGINA
     public function getPlans()
     {
@@ -10,11 +10,6 @@ class galleryPlan extends Plan
         $sql = "SELECT * FROM planes where ID_PLAN = " . $number;
         $result = $this->conn->query($sql);
         return $result;
-    }
-
-    public function formatoMoneda($valor)
-    {
-        return number_format($valor, 2, ",", ".") . "€";
     }
 
     public function showPlans()
@@ -30,7 +25,7 @@ class galleryPlan extends Plan
                     echo "<p>" . $row["Transporte"] . "</p>";
                     //echo "<p>" . $row["Categoria_Principal"] . "</p>";
                     //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                    echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
+                    echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
                     echo "</div>";
                 }
             } else {
