@@ -19,15 +19,30 @@
             width: 400px;
             height: 252px;
         }
+
+        span{
+
+            border: 2px black solid;
+            margin: 5px;
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        #galeriaPrincipal{
+            width: 1350px;
+            height: 500px;
+        }
+
+
     </style>
+    <script src="js/gallery.js"></script>
 </head>
 
 <body>
-    <?php
-    require_once "autoloader.php";
-    $obje = new galleryPlan();
-    $obje->showPlans();
-    ?>
+    <div id="galeriaPrincipal"></div>
+    
 </body>
 
 </html>
