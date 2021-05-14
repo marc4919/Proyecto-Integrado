@@ -1,15 +1,11 @@
-let btn = document.querySelector("#btn");
-let sidebar = document.querySelector(".sidebar");
-let searchBtn = document.querySelector(".bx-search");
+(function() {
+	var $body = document.body
+	, $menu_trigger = $body.getElementsByClassName('menu-trigger')[0];
 
-btn.onclick = function() {
-  sidebar.classList.toggle("active");
-  if(btn.classList.contains("bx-menu")){
-    btn.classList.replace("bx-menu" , "bx-menu-alt-right");
-  }else{
-    btn.classList.replace("bx-menu-alt-right", "bx-menu");
-  }
-}
-searchBtn.onclick = function() {
-  sidebar.classList.toggle("active");
-}
+	if ( typeof $menu_trigger !== 'undefined' ) {
+		$menu_trigger.addEventListener('click', function() {
+			$body.className = ( $body.className == 'menu-active' )? '' : 'menu-active';
+		});
+	}
+
+}).call(this);
