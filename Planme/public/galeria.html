@@ -19,25 +19,30 @@
             width: 400px;
             height: 252px;
         }
+
+        span{
+
+            border: 2px black solid;
+            margin: 5px;
+            padding: 5px;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        #galeriaPrincipal{
+            width: 1350px;
+            height: 500px;
+        }
+
+
     </style>
+    <script src="js/gallery.js"></script>
 </head>
 
 <body>
-
-<div class="navbar">
-  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a> 
-  <a href="#"><i class="fa fa-fw fa-search"></i> Buscar</a> 
-  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
-  <a href="#"><i class="fa fa-fw fa-user"></i> Exit</a>
-</div>
-<a href="http://localhost/Proyecto-Integrado/Planme/public/perfil.php">HOLA</a>
-
-
-    <?php
-    require_once "autoloader.php";
-    $obje = new galleryPlan();
-    $obje->showPlans();
-    ?>
+    <div id="galeriaPrincipal"></div>
+    
 </body>
 
 </html>
