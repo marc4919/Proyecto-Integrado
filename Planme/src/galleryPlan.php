@@ -74,7 +74,7 @@ class galleryPlan extends Plan
 
     public function updatePlans()
     {
-        $planesAparecidos = []; // LA MAGIA - MGT
+        $planesAparecidos = []; // LA MAGIA - MGT ------------ AÑADIRLO COMO ATRIBUTO DE LA CLASE ---------
         for ($i = 0; $i <= 2; $i++) {
             $result = $this->getPlans();
             if ($result->num_rows > 0) {
