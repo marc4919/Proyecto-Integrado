@@ -103,9 +103,10 @@ class galleryPlan extends Plan
 
     public function savePlans($id)
     {
-        /* $sql = "INSERT INTO relacion (ID_Usuario, ID_PLAN, Horario) VALUES ('" . $Nombre . "' ,'" . $correo . "','" . $contrasena . "')";
+        session_start();
+        $sql = "INSERT INTO relacion (ID_Usuario, ID_PLAN, Horario) VALUES ('" . $_SESSION['Usuario'] . "' ,'" . $id . "','" . Staticos::Date() . "')";
         echo "</br>";
         echo $sql;
-        $this->conn->query($sql); */
+        $this->conn->query($sql);
     }
 }

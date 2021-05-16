@@ -41,5 +41,12 @@ function botonGuardar() {
 }
 
 function guardar(identificador) {
-  console.log(identificador);
+  const xhttp = new XMLHttpRequest();
+  xhttp.addEventListener("readystatechange", function () {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(xhttp.responseText);
+    }
+  });
+  xhttp.open("GET", "guardarPlan.php?id=" + identificador, true);
+  xhttp.send();
 }

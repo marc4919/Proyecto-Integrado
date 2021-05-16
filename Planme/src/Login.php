@@ -26,7 +26,7 @@ class Login extends User
                 echo "no hay resultados";
             }
             //Variable de session para que se quede almacenada en la caché 
-            header("location: perfil.php"); //Si necuentra al usuario accde a la web 
+            header("location: galeria.html"); //Si necuentra al usuario accde a la web 
             echo
             '<script>
                     alert("Ha iniciado sesion");
