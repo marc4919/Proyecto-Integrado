@@ -26,7 +26,7 @@
     <?php
     require_once "autoloader.php";
     session_start();
-    echo $_SESSION['Correo'];
+    echo $_SESSION['Usuario'];
     $obje = new UserAdmin();
     $obje->showUser();
     ?>
