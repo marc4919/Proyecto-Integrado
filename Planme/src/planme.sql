@@ -145,7 +145,7 @@ INSERT INTO `planes` (`ID_PLAN`, `ID_Creador`, `Nombre`, `Descripcion`, `Localiz
 (95, 1, 'Most food', 'Se destaca por su tubo de bebida de cerveza', 'Carrer de Gascó Oliag, Valencia,', 'Cualquiera', 'Comida', 'Merienda', 6),
 (96, 1, 'High cube', 'Un nlugar ideal para venir de fiesta y pasartelo espectacular, salta, baila y rie', 'Marina Real Juan Carlos I, Valencia', 'Cualquiera', 'Ocio', 'Fiesta', 10),
 (97, 1, 'Camarote roof', 'THE ROOF es un espacio creado para ofrecer a los valencianos y a los miles de turistas que aman nuestra ciudad, un lugar donde poder desconectar del estrés diario junto a amigos y familiares con la mejor música en directo. La terraza a 5 minutos de la ciudad que permite acompañar unos cócteles con la suave brisa marina', 'Marina Juan Carlos I. Explanada Veles e Vents, Valencia', 'Cualquiera', 'Ocio', 'Comida', 20),
-(98, 1, 'Cream', 'Situado en el antiguo Magnum , TBClub y Pacha Valencia, Cream aporta un nuevo y fresco concepto de buena música hip hop de DJ's y artistas', ' C. de Sant Vicent Màrtir, Valencia', 'Cualquiera', 'Ocio', 'Fiesta', ),
+(98, 1, 'Cream', 'Situado en el antiguo Magnum , TBClub y Pacha Valencia, Cream aporta un nuevo y fresco concepto de buena música hip hop de DJ's y artistas', ' C. de Sant Vicent Màrtir, Valencia', 'Cualquiera', 'Ocio', 'Fiesta', 10),
 (99, 1, 'White House', 'Un lugar ideal para tomar algo y estar en el mejor ambiente de todo valencia', 'Calle de Eolo, Valencia', 'Cualquiera', 'Ocio', 'Pub', 15),
 (100, 1, 'Destino 56', 'Destino 56 es un nuevo concepto multi-espacio, en el que podrás disfrutar de un completo desayuno, una comida entre amigos, una cena o un delicioso ...', 'Passeig de Neptú, Valencia', 'Cualquiera', 'Ocio', 'Chill', 20);
 
