@@ -47,3 +47,139 @@ INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Tr
 INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Museo Nacional de Ceramitca y Artes','El Museo Nacional de Cerámica y Artes Suntuarias González Martí está ubicado en el palacio del Marqués de Dos Aguas','Carrer del Poeta Querol, Valencia','Coche','Turismo','Escultura','3€/persona');
 
 INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Museo de las Ciencias','Descubre las EXPOSICIONES INTERACTIVAS Y ANIMACIONES CIENTÍFICAS PARA CONOCER LAS NUEVAS TECNOLOGÍAS Y LOS AVANCES DE LA CIENCIA','Av. del Professor López Piñero, Valencia','Coche, Autobus, Metro','Turismo','Cultura','29€/persona');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Pastoret','Un buen restaurante, donde si tienes hambre no te quedaras indiferente con sus raciones, y sus tamaños de los bocadillo','Carrer Pi del Salt, 10, 46119 Nàquera, Valencia', 'Cualquiera','Comida','Almuerzo','12,30€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'La Pascuala','La mejor oportunidad para probar unos bocadillos buenos y de gran tamaño, sus abundantes raciones harán que te quedes lleno','Carrer del Dr. Lluch, 299, bajo, 46011 Valencia, Valencia', 'Cualquiera','Comida','Almuerzo','7€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Dominos Pizza','La opción económica para llenarte, su buffet con variedad de pizza te permitirá elegir entre una gran variedad de pizzas','Valencia ', 'Cualquiera','Comida','Comer','8€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Hundred Burger','Hamburguesas de gran tamaño que te dejaran lleno, si eres un amante del queso fundido, te lo recomendamos','Carrer de Misser Mascó, 22, Bajo derecha, 46010 Valencia', 'Cualquiera','Comida','Comer','15€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Rrevel','Gran lugar para comer un buen bocadillo','16 Calle Arzobispo Mayoral', 'Cualquiera','Comida','Comer','10€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'La Pérgola', 'Bar situado en un parque, perfecto para comer mientras que vigilas a tus hijos','Passeig de Albereda, Valencia', 'Cualquiera','Comida','Almuerzo','8€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Muerde la Pasta','Buffet de pasta con una amplia opciones de comida','Carrer de Ribera, 16, 46002 Valencia, Valencia', 'Cualquiera','Comida','Comer','12€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Beata Inés',' Horno con un amplio recorrido, conocido por sus pizzas gigantes y por sus cruasanes , la beata es una gran opción si estas dulzón','Avinguda Nazaret-Oliva, 3, 46419 Mareny de Sant Llorenç, Valencia', 'Cualquiera','Comida','Comer','6€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'The Orange club',' Un parque de barras para entrenar con tus amigos','Carrer de Misser Mascó, 21, 46010 Valencia', 'Cualquiera','Comida','Cena','20€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'La Cigrona',' La Cigrona Restaurant es una opción ideal para su comida o cena de trabajo, familiar, con amigos o cualquier celebración','Carrer dels Serrans, 22, 46003 València, Valencia', 'Cualquiera','Comida','Cena','30€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Casa Carmela',' En Casa Carmela llevamos casi cien años haciendo posible esa liturgia donde el fuego tiene un papel esencial y en el que la tradición, la calidad y la proximidad de la materia prima hacen el resto','Carrer Isabel de Villena, Valencia', 'Cualquiera','Comida','Cena','20€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'El bobo',' Especialidad en paellas, arroces y platos de pescado y marisco. Su terraza con vistas privilegiadas da a la playa y es perfecta para degustar lo mejor de la cocina valenciana junto al mar','Paseo Marítimo, Valencia', 'Cualquiera','Comida','Comer','18€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Elite Gaming',' Salón de videojuegos, júntate con tus amigos y jugar juntos desde un mismo lugar, crecer juntos como un team','Carrer Emili Panach i Ramos', 'Cualquiera','Entretenimiento','Juegos','8,95€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Pc Locura',' Centro de videojuegos, con equipo propio de e-sports, juega para mostrar tus habilidades','Carrer de Rascanya, Valencia", Local 8, 46020', 'Cualquiera','Entretenimiento','Juegos','10€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Ramboot',' Centro de videojuegos, con equipo propio de e-sports, juega para mostrar tus habilidades','Plaça de Horticultor Corset, Valencia,", Local 8, 46020', 'Cualquiera','Entretenimiento','Juegos','7,95€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1' ,'Cala Moraig',' Entre Moraira y Jávea encontramos una recóndita cala turquesa flanqueada por acantilados… para la que es necesaria reserva previa.','Alicante/Moraira','Cualquiera','Naturaleza','Calas','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Cala Granadella',' Un precioso paraíso de tonos turquesa y esmeralda. Una bahía encajonada entre acantilados de aguas tranquilas y de una increíble transparencia','03738,Alicante','Cualquiera','Naturaleza','Calas','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Cala Foradada',' Situada en la zona turística norte, esta cala está rodeada por una zona residencial. Destaca por la forma de sus acantilados, de ahí su nombre. Es ideal para el submarinismo y un baño relajado.','C. Costa Mar, 293-299, 12500 Vinaròs, Castelló','Cualquiera','Naturaleza','Calas','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Cala Blanca',' Compuesta por dos calitas contiguas, conectadas por litoral de piedra. Su nombre deriva del color blanquecino de las rocas de sus acantilados','Camí de la Caleta, 03738 Xàbia, Alicante','Cualquiera','Naturaleza','Calas','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Cala Fonda',' Cala Fonda es conocida popularmente como Waikiki en honor a las mejores playas de Hawai.  Estamos hablando de una de las mejores playas del sur de Cataluña que es todo un “must” que debes visitar si lo que buscas son playas espectaculares','Plaça Talades Pp 26, 19, 03570 La Vila Joiosa, Alicante','Cualquiera','Naturaleza','Calas','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Cala Purtixol',' Cala rústica de grava, bolos y roca situada entre el Cap Prim y el Cap Negre. Cala que se ha dado a conocer gracias a Instagram','Javea','Cualquiera','Naturaleza','Calas','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Parque de Barras Piccolo',' Si eres una persona alta y te gusta el deporte de las barras o la calistenia, te recomendamos este parque de barras por su altura','Carrer de Arquitecte Ribes, València','Cualquiera','Deporte','Aire Libre','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Paraque street work out',' Parque de barras, con gran abundancia de gente, parte de ellos experimentados que te podrán ayudar a progresar','46920 Mislata, Valencia','Cualquiera','Deporte','Aire Libre','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','SON GOTEN ',' Parque de barras con su propio lugar cerrado, tiene una gran posibilidad de usos, gracias a su variedad de barras',' Carrer del Baró de Barxeta, Valencia','Cualquiera','Deporte','Aire Libre','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Parque de Calistenia GOKU',' Amplio parque de barras, con gente muy amable, y siempre dispuesta para ayudar','Carrer de Enginyer Fausto Elio, Valencia','Cualquiera','Deporte','Aire Libre','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Running',' Lugar perfecto para salir a hacer Running sus 7 kilómetros se te harán amenos, gracias a su ambiente de gente corriendo y haciendo deporte','Rio Valencia','Cualquiera','Deporte','Aire Libre','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Ruta en bicicleta ',' El rio Turia cuenta con un carril bici que es perfecto si te apetece dar un paseo, puedes aprovechar y hacer un picnic en algunos de sus amplios lugares de césped','Rio Turia / Saler','Cualquiera','Deporte','Aire Libre','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Aquarama',' Disfruta de nuestros toboganes de agua, la piscina de olas, zona infantil y… ¡nuestro famoso gofre!',' Benicàssim, Castellón','Cualquiera','Ocio','Parque Atcuaticos','24€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Aqualandia/Cullera',' Si lo que te apetece es, refrescarte y pasártelo bien a la vez, tienes que venir a Aqualandia Cullera','Antigua Carretera Nazaret-Oliva, Valencia','Cualquiera','Ocio','Parque Atcuaticos','16.90€ Online/19,95€Taquilla');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Aqualandia/Benidorm',' Un hermoso entorno natural, con grandes atracciones acuáticas para todas las edades y gustos, jardines con vegetación típica de la zona y toda una serie de servicios adicionales te esperan.','03503 Benidorm, Alicante','Cualquiera','Ocio','Parque Atcuaticos','16.90€ Online/19,95€Taquilla');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Terramitica',' Descubre las antiguas civilizaciones del Mediterráneo en Terra Mítica, Benidorm, el parque temático y de atracciones que te hará viajar directamente a la historia de Grecia, Egipto y Roma. Terra Mítica te hará disfrutar de tus mejores días del verano, con espectáculos y atracciones que te emocionarán y harán subir tus niveles de adrenalina.',' Benidorm, Alicante','Cualquiera','Ocio','Parque Atracciones','40€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Feria Valencia',' Feria Muestrario Internacional de Valencia o, como marca comercial, Feria Valencia es la institución organizadora de certámenes feriales más antigua','Valencia','Cualquiera','Ocio','Feria','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Castillo Murallas Cullera',' El Castillo de Cullera es un conjunto de arquitectura militar musulmana que se encuentra en la una zona montañosa de la localidad de Cullera','Pujada Castell, s/n, 46400 Cullera, Valencia','Cualquiera','Turismo','Mirador','3€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Subida al peñón de ifach',' El Parque Natural del Penyal d’Ifac es una joya ambiental que alberga varios endemismos de flora (especies únicas en el mundo), a la vez que constituye un importante refugio para las aves.','Carr. del Peñon, 03710 Calp, Alicante','Cualquiera','Ruta','Turismo','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Ruta de Olocau en la Sierra Calderona',' Desde el Neolítico han quedado numerosos res- tos en forma de yacimientos que han dejado una huella de gran riqueza arqueológica.','Olocau, 46169, Valencia','Cualquiera','Ruta','Turismo','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Ruta de los Puentes Colgantes  y el embalse de Loriguilla',' Una de las rutas más bonitas que puedes hacer en el interior de la provincia de Valencia, es la que discurre por las Hoces del Río Turia. Un cañón excavado por el agua durante miles de años que nos ha dejado un paisaje espectacular, dentro del Paraje Natural Municipal de Los Calderones. ','46160 Chulilla, Valencia','Cualquiera','Ruta','Turismo','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Ruta del Agua de Chelva',' Una gran ruta donde podremos encontrarnos por el camino, algunas de las antiguas ruinas arqueológicas , donde podremos encontrar una mezcla de cultura histórica y naturaleza',' laza Mayor,  Chelva, Valencia','Cualquiera','Ruta','Turismo','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Castillo Xativa',' Doble fortaleza situada en la sierra del Castell, sobre Xàtiva, por la situación estratégica de la ciudad ha sido escenario y testimonio de numerosos conflictos. Dividido en el Castell Menor y el Castell Major, el primero se asienta sobre restos iberos y romanos. ', 'Subida al Castillo, Xàtiva, Valencia','Cualquiera','Turismo','MIrador','6€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Cine Yelmo', 'Una experiencia de cine asegurada, puedes ver tus películas favoritas en los sillones VIP como en la comodidad de tu casa o en las salas estándar', 'Mercado de, Av. de Tirso de Molina, 16, 46015 Valencia','Cualquiera','Ocio','Cine','6,10€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','ABC Gran Turia ','Cine situado en el recinto del Prica, una gran opción si lo que deseas es comer algo tras ver una película','Plaza Europa, Xirivella, Valencia','Cualquiera','Ocio','Cine','6,90€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Cine Aqua','Etos cines esta situado en uno de los centros comerciales más céntricos de la comunidad valenciana, lo podemos encontrar junto a la ciudad de las artes y las ciencias','Carrer de Menorca, 19, 46023 Valencia, Valencia','Cualquiera','Ocio','Cine','9,50€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Kinepolis','Estos cines situados en el Centro de Ocio Herón City','Avinguda de Francisco Tomàs I Valiente, s/n, 46980, Valencia','Cualquiera','Ocio','Cine','7,10€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Piscina Quart de poblet ','Quart de Poblet reabre sus instalaciones de piscina cubierta, balneario y salas de cardio y musculación.','Quart de poblet','Cualquiera','Ocio','Piscina','1,50€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Piscina Municipal Mislata','Piscina municipal de Mislata, en la que te podrás dar baños nocturnos','Mislata','Cualquiera','Ocio','Piscina','2,8€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Piscina Abastos  ','Centro deportivo que cuenta con dos piscinas cubiertas','Carrer Alberic, 18, 46008 Valencia','Cualquiera','Ocio','Piscina','3,85€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Piscina Municipal Ayora ','Descubre qué te ofrece la Piscina Municipal Ayora. Disponemos de un amplio complejo deportivo con las más completas instalaciones y servicios.','Carrer de Jeroni de Montsoriu, Valencia','Cualquiera','Ocio','Piscina','1,80€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Quest Laser Café','Disfruta de un fantástico café, mientras que tus hijos echan unas partidas','Av. Pío Baroja ,Valencia','Cualquiera','Comida','Café','11€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Laser Game Herón City','Disfruta de las fantásticas instalaciones con las que cuenta, podrás echar unas partidas con tus amigos llenas de adrenalina, siéntete como un guerrero',' Carrer Accés Pista Ademús, Paterna, Valencia','Cualquiera','Ocio','Infantil','5€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','ALFAZONE Laser Game','Si lo que buscas es pasártelo bien, te recomendamos que pruebes esta experiencia',' Carrer Castelló, Valencia','Cualquiera','Ocio','Infantil','7€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Colonial Buffet','Si tienes hambre, te recomendamos este buffet, podrás comer hasta saciar tu hambre','Carrer Pont Trencat, 7 - CC. Parque Albán, Burjassot','Cualquiera','Comida','Buffet','14,75€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Restaurante Aoyama','Somos un restaurante japonés en valencia, Ofrecemos no sólo sushi, maki, sashimi y los platos más conocidos de los restaurantes japoneses, sino que también tenemos comida japonesa casera',' Carrer de Joaquín Costa, Valencia','Cualquiera','Shushi','Buffet','15€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Asador Wok Buffet Libre', 'La mejor carne en grandes cantidades, come carne hasta llenar tu estomago',' Av. de Pius XII, Valencia','Cualquiera','Comida','Carne','10€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Restaurante Japonés Sakura','El restaurante Sakura es el decano de los restaurantes japoneses en Valencia, con una larga experiencia en la preparación de comida japonesa.','Av. de Pius XII, Valencia','Cualquiera','Comida','Shushi','11,85€');
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES 
+('1','Restaurante el Quitin',' En Restaurante Quitín nos especializamos en arroces por encargo, pizzas y carnes a la brasa','Carrer de Espartero, 63, 46100 Burjassot, Valencia','Cualquiera','Comida','Cena','14,87€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Saona',' Saona no trabaja con Quinta Gama, tiene una cocina central que reparte a los restaurantes','Carrer de Martínez Cubells, Valencia','Cualquiera','Comida','Cena','18€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1',' Maratón de Series',' Siempre tienes alguna saga de películas que quieres ver, pues es la hora de comenzar, te recomendamos algunas como : Juego de Tronos, Sherlock, Peaky Blinders, Dark, The Mandalorian',' En casa','Cualquiera','Entretenimiento','Cine','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1',' Maratón de Películas
+',' Todos tenemos películas pendientes en nuestra lista, así que es el momento de comenzar con esa saga, a la que le tienes tantas ganas, te recomendamos algunas como : El Padrino, Star Wars, Regreso al Futuro, Marvel', ' En casa','Cualquiera','Entretenimiento','Cine','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','La Pollería',' Te apetece probar una experiencia única e irrepetible, comerte una po***','Carrer dels Cavallers 3, 46001 València','Cualquiera','Comida','Merienda','4€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Bolera Heron City',' Si te apetece echar unas partidas de bolos, este es tu lugar, a demás cuentan con unas maquinas recreativas en su piso superior',' Herón City Paterna','Cualquiera','Ocio','Bolera','9,95€ ');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Felisano','Si no lo has probado, debes de hacerlo, el pan baozi es una bolita de pan rellena de carne','Carrer de Pelai, València','Cualquiera','Comida','Merienda','0,7');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Hundred - MEJOR HABURGUESA ','Una genial hamburguesería, condecorada como la mejor hamburguesa del 2018, debes de ir a probar su fantástica comida','Carrer de Misser Mascó, Valencia','Cualquiera','Comida','Comida','10€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1', 'Tienda de Cómics Futurama','El paraíso para amantes del Cómic, donde puedes encontrar cómics europeos, USA y manga','C/ de Guillem de Castro, Valencia','Cualquiera','Lectura','Entretenimiento','4€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1','Sesión de Fotos','A quien no le gusta verse en fotos, puedes aprovechar e ir de sesión de fotos y buscar spots para hacer fotos chulísimas', 'Cualquier lugar es bueno, para hacer unas buenas fotos, pero te recomendamos algunos lugares : Parque la Canaleta-Mislata, Puerto de Valencia-LaMarina, Ciudad de las Artes y las Ciencias-Artes y las Ciencias','Fotografia','Belleza','Entretenimiento','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1', 'Teatro', 'Por qué no, hay obras de teatro que te dejara boquiabierto', 'Hay muchos teatros, con fantásticas obras de teatro, algunos teatros son : Teatro Olympia, Teatro Talía, Teatro Flumen, Teatre Micalet','Cualquiera','Ocio','Teatro','15,31€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1', 'Las pequeña Venecia', 'Es una urbanización alrededor de un pequeño puerto deportivo. Situada en la localidad de Alboraya, a pocos kilometros de Valencia siguiendo la Playa de la Malvarrosa en dirección norte', 'Port Saplaya – Alboraya','Cualquiera','Turismo','Vistas','0€');
+
+INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('1', 'Akuarela', 'Si quieres salir a tomar algo por la noche, puedes acercarte a Akuarela Playa, podrás entrar gratis antes de la 01:00', 'Carrer Eugènia Viñes,  Valencia','Cualquiera','Ocio','Fiesta','10€');
+
+
+
