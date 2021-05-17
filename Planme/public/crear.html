@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
+        <script src="js/creacionModular.js"></script>
         <meta charset="utf-8">
         <title>Proyecto-Integrado</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -60,28 +61,31 @@
     <body>
     <div class="contenedor">
     
-    <textarea class="paquete" draggable="false" id="caja1" required placeholder="Nombre Plan" ondragstart="dragstart(this, event)"></textarea>
-    <textarea class="paquete" draggable="false" id="caja2" required placeholder="Descripción Plan" ondragstart="dragstart(this, event)"></textarea>
-    <textarea class="paquete" draggable="false" id="caja3" required placeholder="Localización" ondragstart="dragstart(this, event)"></textarea>
-    <div class="paquete" draggable="false" id="caja4" placeholder="Nombre Plan" ondragstart="dragstart(this, event)">
+    <textarea class="paquete" draggable="false" id="caja1" name="Nombre" required placeholder="Nombre Plan" ondragstart="dragstart(this, event)"></textarea>
+    <textarea class="paquete" draggable="false" id="caja2" name="Descripcion" required placeholder="Descripción Plan" ondragstart="dragstart(this, event)"></textarea>
+    <textarea class="paquete" draggable="false" id="caja3" name="Localizacion" required placeholder="Localización" ondragstart="dragstart(this, event)"></textarea>
+    <div class="paquete" draggable="false" id="caja4"  ondragstart="dragstart(this, event)">
         <span>Transporte</span>
-        <select class="paquete" draggable="false">
-            <option>Coche</option>
+        <select class="paquete" name="Transporte" draggable="false">
+            <option value="Coche">Coche</option>
         </select></div>
     <div class="paquete" draggable="false" id="caja5"  placeholder="Nombre Plan" ondragstart="dragstart(this, event)">
             <span>Categoria1</span>
-            <select class="paquete" draggable="false">
-                <option>Coche</option>
+            <select class="paquete" name="Categoria1" draggable="false">
+                <option value="Coche">Coche</option>
             </select></div>
             <div class="paquete" draggable="false" id="caja6"  placeholder="Nombre Plan" ondragstart="dragstart(this, event)">
                 <span>Categoria2</span>
-                <select class="paquete" draggable="false">
-                    <option>Coche</option>
+                <select class="paquete" name="Categoria2" draggable="false">
+                    <option value="Coche">Coche</option>
                 </select></div>
-    <textarea class="paquete" draggable="false" id="caja7" required placeholder="Precio" ondragstart="dragstart(this, event)"></textarea>
+    <textarea class="paquete" draggable="false" id="caja7" name="Precio" required placeholder="Precio" ondragstart="dragstart(this, event)"></textarea>
+    
+    
 </div>
     <!-- contenedor -->
     <div class="contenedor" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false"> <span>Contenedor</span>
+        <form action="" method="post" id="formulario"><button>Sesión</button></form>
 </br>
 
     </div>
@@ -94,13 +98,12 @@
             }
 
             function drop(target, evento) {
-                contendor = document.getElementById("contenedor").childElementCount;
-                let hijos = contendor.childNodes;
+                form = document.getElementById("formulario");
+                
                 // obtenemos los datos
                 var caja = event.dataTransfer.getData('Data');
                 // agregamos el elemento de arrastre al contenedor
-                target.appendChild(document.getElementById(caja));
-                console.log(contendor);
+                form.appendChild(document.getElementById(caja));
             }
 
             function draguear(){
