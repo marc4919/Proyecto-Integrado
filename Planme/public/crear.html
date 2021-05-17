@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Proyecto-Integrado</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+        <style>
+            /*
+             * propiedades de las cajas (arrastrables)
+             */
+             div[id ^='caja'] {
+                width:330px;
+                height:auto;
+                background:rgba(204, 0, 0, 0.8);
+                border: 3px solid rgba(204, 0, 0, 1);
+                margin:5px auto;
+                padding:5px;
+                color:#FFF;
+            }
+            
+            textarea[id ^='caja'] {
+                width:330px;
+                height:auto;
+                background:rgba(204, 0, 0, 0.8);
+                border: 3px solid rgba(204, 0, 0, 1);
+                margin:5px auto;
+                padding:5px;
+                color:#FFF;
+            }
+            
+            /*
+             * propiedades que van a tomar el elemento arrastrable luego de que  este se suelte dentro de su contenedor
+             */
+            div[id ^='contenedor'] div[id ^='caja'] {	
+                background:rgba(0,178,255,0.8);
+                border: 3px solid rgba(0,178,255, 1);
+                float:right;
+            }
+            div[id ^='contenedor'] div[id ^='caja'] span {
+                color:#FFF;
+            }
+            
+            /*
+             * propiedades del contenedor
+             */
+            div[class ^='contenedor'] {
+                
+                width:350px;
+                height:500px;
+                background:rgba(38,104,127,0.8);
+                border: 3px solid rgba(38,104,127, 1);
+                margin:5px auto;
+                padding:5px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+    <div class="contenedor">
+    
+    <textarea class="paquete" draggable="false" id="caja1" required placeholder="Nombre Plan" ondragstart="dragstart(this, event)"></textarea>
+    <textarea class="paquete" draggable="false" id="caja2" required placeholder="Descripción Plan" ondragstart="dragstart(this, event)"></textarea>
+    <textarea class="paquete" draggable="false" id="caja3" required placeholder="Localización" ondragstart="dragstart(this, event)"></textarea>
+    <div class="paquete" draggable="false" id="caja4" placeholder="Nombre Plan" ondragstart="dragstart(this, event)">
+        <span>Transporte</span>
+        <select class="paquete" draggable="false">
+            <option>Coche</option>
+        </select></div>
+    <div class="paquete" draggable="false" id="caja5"  placeholder="Nombre Plan" ondragstart="dragstart(this, event)">
+            <span>Categoria1</span>
+            <select class="paquete" draggable="false">
+                <option>Coche</option>
+            </select></div>
+            <div class="paquete" draggable="false" id="caja6"  placeholder="Nombre Plan" ondragstart="dragstart(this, event)">
+                <span>Categoria2</span>
+                <select class="paquete" draggable="false">
+                    <option>Coche</option>
+                </select></div>
+    <textarea class="paquete" draggable="false" id="caja7" required placeholder="Precio" ondragstart="dragstart(this, event)"></textarea>
+</div>
+    <!-- contenedor -->
+    <div class="contenedor" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false"> <span>Contenedor</span>
+</br>
+
+    </div>
+    <button onclick="draguear()">Compactar</button>
+        <script>
+
+            function dragstart(caja, evento) {
+                // el elemento a arrastrar
+                event.dataTransfer.setData('Data', caja.id);
+            }
+
+            function drop(target, evento) {
+                contendor = document.getElementById("contenedor").childElementCount;
+                let hijos = contendor.childNodes;
+                // obtenemos los datos
+                var caja = event.dataTransfer.getData('Data');
+                // agregamos el elemento de arrastre al contenedor
+                target.appendChild(document.getElementById(caja));
+                console.log(contendor);
+            }
+
+            function draguear(){
+                paquete = document.getElementsByClassName("paquete");
+                dragueado = paquete[0].getAttribute("draggable");
+                console.log(dragueado);
+                if (dragueado === "false"){
+                for (let i = 0; i < paquete.length; i++) {
+                    paquete[i].setAttribute("draggable", "true");
+                    console.log(dragueado);
+                }
+                }else if(dragueado === "true"){
+                    for (let i = 0; i < paquete.length; i++) {
+                    paquete[i].setAttribute("draggable", "false");
+                    console.log(dragueado);
+                    }
+            }              
+            }
+        </script>
+
+    </body>
+</html>
