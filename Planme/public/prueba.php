@@ -4,3 +4,4 @@ $prueba = new Admin();
 $prueba->showCountPlans();
 $prueba->showCountUser();
 $prueba->showUser();
+$prueba->showPlans();
