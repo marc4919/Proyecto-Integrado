@@ -25,6 +25,7 @@ body {
 
 .menu li a {
     text-decoration: none;
+    color: black;
 }
 
 .menu li {
@@ -55,6 +56,7 @@ body {
 
 
 .container {
+    margin-top: 5%;
     min-height: 100%;
 }
 a {
@@ -120,8 +122,3 @@ a {
     transition: 5s;
     transform: scale(1.5);
 }
-
-
-
-/* https://www.w3schools.com/css/css3_transitions.asp
- */
