@@ -1,3 +1,6 @@
 <?php
 require "autoloader.php";
-$prueba = new Conexion();
+$prueba = new Admin();
+$prueba->showCountPlans();
+$prueba->showCountUser();
+$prueba->showUser();
