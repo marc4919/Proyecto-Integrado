@@ -3,7 +3,7 @@
 
     public function getUser()
     {
-        $sql = "SELECT * FROM usuario";
+        $sql = "SELECT * FROM usuario where ID_Usuario != 1";
         echo $sql;
         $result = $this->conn->query($sql);
         return $result;
@@ -38,10 +38,12 @@
         $result = $this->getUser();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<div>";
-                echo "<p>" . $row["ID_Usuario"] . "</p>";
-                echo "<p>" . $row["Nombre"] . "</p>";
-                echo "</div>";
+                echo "<table>";
+                echo "<tr>";
+                echo "<td>" . $row["ID_Usuario"] . "</td>";
+                echo "<td>" . $row["Nombre"] . "</td>";
+                echo "</tr>";
+                echo "</table>";
             }
         } else {
             echo "no hay resultados";
