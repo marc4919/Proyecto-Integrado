@@ -1,5 +1,5 @@
 <?php
- session_start();
+session_start();
 class Login extends User
 {
 
@@ -15,26 +15,34 @@ class Login extends User
         echo $this->conn->error;
 
         if (mysqli_num_rows($Consulta) > 0) {
-            $_SESSION['Nombre']= $Nombre; //Varialbe de session para que se quede almacenada en la caché 
-            header("location: ../public/selecciona.php"); //Si necuentra al usuario accde a la web 
-             echo
+            if ($Consulta->num_rows > 0) {
+                while ($row = $Consulta->fetch_assoc()) { {
+
+                        $_SESSION['Usuario'] = $row["ID_Usuario"];
+                        $_SESSION['PlanesMostrados'] = [];
+                        array_push($_SESSION['PlanesMostrados'], 0);
+                    }
+                }
+                header("location: ../public/selecciona.php"); //Si necuentra al usuario accde a la web 
+                echo
                 '<script>
                 alert("Ha iniciado sesion");
                 window.location= "../public/selecciona.php";
                  </script>
                 ';
-            }else{ //Si no lo encuantra vuelve a la pagina donde se inicia sesion 
-            echo 
-                '<script>
-                alert("SU USUARIO NO EXISTE, COMPRUEBE LOS DATOS INTRODUCIDOS"); 
-                window.location= "../register-log.html";
-                </script>
-                '; 
-            exit();
             }
-            
-            
-            /*if ($Consulta->num_rows > 0) {
+        } else { //Si no lo encuantra vuelve a la pagina donde se inicia sesion 
+            echo
+            '<script>
+                alert("SU USUARIO NO EXISTE, COMPRUEBE LOS DATOS INTRODUCIDOS"); 
+                window.location= "register-log.php";
+                </script>
+                ';
+            exit();
+        }
+
+
+        /*if ($Consulta->num_rows > 0) {
                 while ($row = $Consulta->fetch_assoc()) { {
                         $_SESSION['Correo'] = $Correo;
                         $_SESSION['Usuario'] = $row["ID_Usuario"];
@@ -53,6 +61,5 @@ class Login extends User
                 }
             } else {
                 echo "no hay resultados"; */
-        }
     }
-
+}
