@@ -1,3 +1,5 @@
+/* GENERAL
+=========================== */
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +13,8 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/*  MENU */
+/* NAVBAR
+=========================== */
 .menu {
     display: flex;
     justify-content: center;
@@ -34,25 +37,20 @@ body {
     text-align: center;
 }
 
+ .menu li a:hover {
+    color:rgb(173, 27, 27);
+    cursor: pointer;
+    font-size: 25px;
+
+  }
+
 .logo {
-    max-width: 120px;
-    max-height: 120px;
-    transition: 10s;
-    animation-iteration-count: infinite;
-    animation-name: example;
-    animation-duration: 4s;
+    max-width: 123px;
+    max-height: 130px;
 }
 
-@keyframes example {
-    from {
-        transform: scale(0.9);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
-;
+/* CONTENT
+=========================== */
 
 
 .container {
@@ -85,6 +83,9 @@ a {
     position: relative;
 }
 
+.typing {
+    color : rgb(173, 27, 27);
+}
 /* TEXTO IZQUIERDA */
 .text {
     margin-top: 15%;
