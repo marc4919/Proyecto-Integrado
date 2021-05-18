@@ -77,4 +77,23 @@
             echo "no hay resultados";
         }
     }
+
+    public function showPlans()
+    {
+        $result = $this->getPlans();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<table>";
+                echo "<tr>";
+                echo "<td>" . $row["ID_PLAN"] . "</td>";
+                echo "<td>" . $row["ID_Creador"] . "</td>";
+                echo "<td>" . $row["Nombre"] . "</td>";
+                echo "<td>" . $row["Descripcion"] . "</td>";
+                echo "</tr>";
+                echo "</table>";
+            }
+        } else {
+            echo "no hay resultados";
+        }
+    }
 }
