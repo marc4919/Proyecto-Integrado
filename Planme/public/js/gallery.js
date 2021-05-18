@@ -11,7 +11,6 @@ function main() {
       gP.innerHTML = xhttp.responseText;
       botonGuardar();
       refresh();
-      botonGuardar();
     }
   });
   xhttp.open("GET", "mostrarGaleria.php", true);

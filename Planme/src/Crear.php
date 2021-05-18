@@ -1,9 +1,10 @@
 <?php
 
-class galleryPlan extends Plan
+class Crear extends Plan
 {
     public function insertarNuevoPlan()
     {
+        session_start();
         $ID_Creador = $_SESSION['Usuario'];
         $Nombre = $_POST['Nombre'];
         $descripcion = $_POST['Descripcion'];
@@ -17,7 +18,7 @@ class galleryPlan extends Plan
         // $contrasena = hash('sha512', $contrasena); //Encrptacion de la contraseña
 
         //Creamos una query para almacenar los datos en la base de datos 
-        $sql = "INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('" . $ID_Creador . "' ,'" . $Nombre . "','" . $descripcion . "' ,'" . $localizacion . "' ,'" . $transporte . "' ,'" . $categoria1 . "' ,'" . $categoria2  . "' ,'" . $precio . "')";
+        $sql = "INSERT INTO `planes`( `ID_Creador`, `Nombre`, `Descripcion`, `Localizacion`, `Transporte`, `Categoria_Principal`, `Categoria_Secundaria`, `Precio`) VALUES ('" . $ID_Creador . "' ,'" . $Nombre . "','" . $descripcion . "' ,'" . $localizacion . "' ,'" . $transporte . "' ,'" . $categoria1 . "' ,'" . $categoria2  . "' ,'" . $precio . "')";
         echo "</br>";
         echo $sql;
         $this->conn->query($sql);

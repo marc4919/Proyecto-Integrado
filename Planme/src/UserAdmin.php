@@ -55,8 +55,4 @@
     public function updateUser() // CAMBIAR MÉTODO A OTRA CLASE
     {
     }
-
-    public function updateTest() // CAMBIAR MÉTODO A OTRA CLASE
-    {
-    }
 }
