@@ -1,3 +1,17 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['Nombre'])){ //Inicializamos la variable de sesion para accdeer
+    echo ' 
+    <script> 
+    alert("Debes iniciar sesion para acceder")
+    </script>
+    ';
+    session_destroy(); //Nos destruye la sesion 
+    die();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
