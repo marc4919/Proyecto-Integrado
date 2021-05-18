@@ -15,27 +15,29 @@ class Register extends User
         //Creamos una query para almacenar los datos en la base de datos 
 
         $sql = "INSERT INTO usuario (Nombre, Correo, Password) VALUES ('" . $Nombre . "' ,'" . $correo . "','" . $contrasena . "')";
+        echo '
+            <script>
+                alert("Se ha registrado correctamente");
+                window.location=  "../public/register-log.html";
+            </script>
+            ';
         echo "</br>";
         echo $sql;
         $this->conn->query($sql);
-    }
 
-    public function verficacion($correo, $Nombre)
-    {
-        $verificacion_email = "SELECT * FROM usuario where Correo ='$correo' or  Nombre='$Nombre'";
-        $Consulta = $this->conn->query($verificacion_email);
-        return $Consulta;
-
+        $verificacion = "SELECT * FROM usuario where Correo='$correo' or Nombre='$Nombre'";
+        echo $verificacion;
+        $Consulta = $this->conn->query($verificacion);
+        echo $this->conn->error;
 
         if (mysqli_num_rows($Consulta) > 0) {
             echo '
-            <script>
-                alert("Uno de los campos ya ha sido registrado (email o usuario)");
-                window.location=  "../index.php";
-            </script>
-            ';
-            exit(); //Imprime el mensaje y acaba el script actual
-            //Cuando el codigo llegue a exit el codigo de abajo no se ejecutará
+        <script>
+            alert("Uno de los campos ya ha sido registrado (email o usuario)");
+            window.location=  "../proyecto.php";
+        </script>
+        ';
+        exit();
         }
     }
 }
