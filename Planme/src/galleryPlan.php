@@ -36,7 +36,6 @@ class galleryPlan extends Plan
                 echo "</pre>";
                 echo "</div>";
                 array_push($_SESSION['PlanesMostrados'], $row['ID_PLAN']);
-                print_r($_SESSION['PlanesMostrados']);
             }
         } else {
             echo "no hay resultados";

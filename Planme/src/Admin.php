@@ -4,7 +4,6 @@
     public function getUser()
     {
         $sql = "SELECT * FROM usuario where ID_Usuario != 1";
-        //echo $sql;
         $result = $this->conn->query($sql);
         return $result;
     }
@@ -12,7 +11,6 @@
     public function getCountUser()
     {
         $sql = "SELECT count(*) AS 'RecuentoUsuarios' FROM usuario";
-        //echo $sql;
         $result = $this->conn->query($sql);
         return $result;
     }
@@ -20,7 +18,6 @@
     public function getPlans()
     {
         $sql = "SELECT * FROM planes";
-        echo $sql;
         $result = $this->conn->query($sql);
         return $result;
     }
@@ -28,7 +25,6 @@
     public function getCountPlans()
     {
         $sql = "SELECT count(*) AS 'RecuentoPlanes' FROM planes";
-        //echo $sql;
         $result = $this->conn->query($sql);
         return $result;
     }
@@ -38,9 +34,11 @@
         $result = $this->getUser();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
+                echo "<table class ='tablaUsuarios'>";
                 echo "<tr>";
                 echo "<td>" . $row["ID_Usuario"] . "</td>";
                 echo "<td>" . $row["Nombre"] . "</td>";
+                echo "<td>" . $row["Correo"] . "</td>";
                 echo "</tr>";
                 echo "</table>";
             }
@@ -85,9 +83,7 @@
                 echo "<table>";
                 echo "<tr>";
                 echo "<td>" . $row["ID_PLAN"] . "</td>";
-                echo "<td>" . $row["ID_Creador"] . "</td>";
                 echo "<td>" . $row["Nombre"] . "</td>";
-                echo "<td>" . $row["Descripcion"] . "</td>";
                 echo "</tr>";
                 echo "</table>";
             }

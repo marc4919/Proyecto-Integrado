@@ -1,17 +1,3 @@
-<?php
-
-session_start();
-if (!isset($_SESSION['Nombre'])){ //Inicializamos la variable de sesion para accdeer
-    echo ' 
-    <script> 
-    alert("Debes iniciar sesion para acceder")
-    </script>
-    ';
-    session_destroy(); //Nos destruye la sesion 
-    die();
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,22 +12,22 @@ if (!isset($_SESSION['Nombre'])){ //Inicializamos la variable de sesion para acc
 
   <!-- NAVBAR
   =============================== -->
-    <nav>
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><img class="logo" src="img/logo.png"></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Faq</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul class="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><img class="logo" src="img/logo.png"></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Faq</a></li>
+    </ul>
+  </nav>
 
 
   <!-- CONTENT
   =============================== -->
   <div class="content">
     <div class="split left">
-      <img src="img/paella.png"  class="imagen">
+      <img src="img/paella.png" class="imagen">
       <div class="text">
         <h1 class="title">Crea tus planes</h1>
         <p class="desc"><br><br>Crea tus propios planes, y crece <br>en nuestra comunidad.<br>La imaginación no tiene limite.</p>
@@ -64,4 +50,5 @@ if (!isset($_SESSION['Nombre'])){ //Inicializamos la variable de sesion para acc
   <!-- js -->
   <script src="js/selecciona.js"></script>
 </body>
+
 </html>
