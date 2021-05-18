@@ -4,7 +4,6 @@ class Crear extends Plan
 {
     public function insertarNuevoPlan()
     {
-        echo "HOLA";
         session_start();
         $ID_Creador = $_SESSION['Usuario'];
         $Nombre = $_POST['Nombre'];

@@ -20,6 +20,8 @@ class Login extends User
                 while ($row = $Consulta->fetch_assoc()) { {
                         $_SESSION['Correo'] = $Correo;
                         $_SESSION['Usuario'] = $row["ID_Usuario"];
+                        $_SESSION['PlanesMostrados'] = [];
+                        array_push($_SESSION['PlanesMostrados'], 0);
                     }
                 }
             } else {
