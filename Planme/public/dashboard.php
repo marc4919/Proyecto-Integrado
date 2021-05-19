@@ -30,16 +30,8 @@ $prueba = new Admin();
 				<div class="dropdown">
 					<img src="img/dashboard/admin.png" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
 					<ul id="user-menu" class="menu">
-						<li>
-							<a class="dropdown-menu-link">
-								<div>
-									<i></i>
-								</div>
-								<span>Profile</span>
-							</a>
-						</li>
 						<li class="dropdown-menu-item">
-							<a href="#" class="dropdown-menu-link">
+							<a href="inicio.html" class="dropdown-menu-link">
 								<div>
 									<i></i>
 								</div>
@@ -95,7 +87,7 @@ $prueba = new Admin();
 				<div class="card">
 					<div class="card-header">
 						<h3>
-							Table
+							Datos Usuarios
 						</h3>
 					</div>
 					<div class="card-content">
@@ -120,7 +112,7 @@ $prueba = new Admin();
 				<div class="card">
 					<div class="card-header">
 						<h3>
-							Table
+							Datos Planes
 						</h3>
 					</div>
 					<div class="card-content">
