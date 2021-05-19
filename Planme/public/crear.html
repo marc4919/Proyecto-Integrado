@@ -54,12 +54,27 @@
                 margin:5px auto;
                 padding:5px;
             }
+
+            #contenedor1{
+                float:left;
+            }
+
+            #contenedor{
+                float:right;
+            }
+
+            #almacenaje{
+                width: 800px;
+                margin: auto;
+            }
+
         </style>
 
     </head>
 
     <body>
-    <div class="contenedor">
+    <div id="almacenaje">
+    <div class="contenedor" id="contenedor1">
     
     <textarea class="paquete" draggable="false" id="caja1" name="Nombre" required placeholder="Nombre Plan" ondragstart="dragstart(this, event)"></textarea>
     <textarea class="paquete" draggable="false" id="caja2" name="Descripcion" required placeholder="Descripción Plan" ondragstart="dragstart(this, event)"></textarea>
@@ -115,6 +130,7 @@
 </br>
 
     </div>
+</div>
     <button onclick="draguear()">Compactar</button>
         <script>
 
