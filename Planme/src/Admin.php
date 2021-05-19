@@ -34,13 +34,12 @@
         $result = $this->getUser();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<table class ='tablaUsuarios'>";
+
                 echo "<tr>";
                 echo "<td>" . $row["ID_Usuario"] . "</td>";
                 echo "<td>" . $row["Nombre"] . "</td>";
                 echo "<td>" . $row["Correo"] . "</td>";
                 echo "</tr>";
-                echo "</table>";
             }
         } else {
             echo "no hay resultados";
@@ -80,12 +79,10 @@
         $result = $this->getPlans();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<table>";
                 echo "<tr>";
                 echo "<td>" . $row["ID_PLAN"] . "</td>";
                 echo "<td>" . $row["Nombre"] . "</td>";
                 echo "</tr>";
-                echo "</table>";
             }
         } else {
             echo "no hay resultados";

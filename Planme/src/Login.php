@@ -21,9 +21,14 @@ class Login extends User
                         $_SESSION['Usuario'] = $row["ID_Usuario"];
                         $_SESSION['PlanesMostrados'] = [];
                         array_push($_SESSION['PlanesMostrados'], 0);
+                        if ($_SESSION['Usuario'] != 1) {
+                            header("location: ../public/selecciona.php");
+                        } else {
+                            header("location: ../public/dashboard.php");
+                        }
                     }
                 }
-                header("location: ../public/selecciona.php"); //Si necuentra al usuario accde a la web 
+                //Si necuentra al usuario accde a la web 
                 echo
                 '<script>
                 alert("Ha iniciado sesion");
