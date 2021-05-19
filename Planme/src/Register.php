@@ -30,14 +30,16 @@ class Register extends User
         $Consulta = $this->conn->query($verificacion);
         echo $this->conn->error;
 
-        if (mysqli_num_rows($Consulta) > 0) {
+        if (mysqli_num_rows($Consulta) > 1) {
             echo '
         <script>
             alert("Uno de los campos ya ha sido registrado (email o usuario)");
             window.location=  "../proyecto.php";
         </script>
         ';
-        exit();
+            exit();
+        } else {
+            header("location: ../public/selecciona.html");
         }
     }
 }
