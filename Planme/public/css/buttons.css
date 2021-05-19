@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background:rgb(254, 249, 231);
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.center {
+  width: 180px;
+  height: 0px;
+  position: flex;
+  gap:20px;
+  padding: 10px;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid black;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background:red;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn a {
+  color: rgb( 44, 62, 80);
+  font-size: 18px;
+  font-weight: 100;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin-bottom: 340px;
+}
+img{
+    width: 300px;
+    height: 300px;
+    margin-top: -245px;
+    margin-left: -190px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+
+}
