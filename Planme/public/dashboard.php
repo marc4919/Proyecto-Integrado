@@ -6,43 +6,34 @@ $prueba = new Admin();
 //$prueba->showUser();
 //$prueba->showPlans();
 ?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>ATPro Admin</title>
+	<title>Admin</title>
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<script src="js/admin.js"></script>
 </head>
 
-<body class="overlay-scrollbar">
-	<!-- navbar -->
+<body>
+
 	<div class="navbar">
-		<!-- nav left -->
-		<ul class="navbar-nav">
-			<li class="nav-item">
-				<a class="nav-link">
-					<i class="fas fa-bars" onclick="collapseSidebar()"></i>
-				</a>
-			</li>
-			<li class="nav-item">
-				<img src="logo.png">
-			</li>
-		</ul>
-		<!-- end nav left -->
+
+		<li class="nav-item">
+			<img src="img/logo-adaptado.png">
+		</li>
 
 		<!-- nav right -->
-		<ul class="navbar-nav nav-right">
-
-			<li class="nav-item avt-wrapper">
-				<div class="avt dropdown">
-					<img src="assets/tuat.jpg" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
-					<ul id="user-menu" class="dropdown-menu">
-						<li class="dropdown-menu-item">
+		<ul class="nav-right">
+			<li>
+				<div class="dropdown">
+					<img src="img/user.png" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+					<ul id="user-menu" class="menu">
+						<li>
 							<a class="dropdown-menu-link">
 								<div>
-									<i class="fas fa-user-tie"></i>
+									<i></i>
 								</div>
 								<span>Profile</span>
 							</a>
@@ -50,7 +41,7 @@ $prueba = new Admin();
 						<li class="dropdown-menu-item">
 							<a href="#" class="dropdown-menu-link">
 								<div>
-									<i class="fas fa-sign-out-alt"></i>
+									<i></i>
 								</div>
 								<span>Logout</span>
 							</a>
@@ -59,59 +50,53 @@ $prueba = new Admin();
 				</div>
 			</li>
 		</ul>
-		<!-- end nav right -->
 	</div>
-	<!-- end navbar -->
 
-	<!-- main content -->
+
+
+
+
 	<div class="wrapper">
 		<div class="row">
+			<!--Nº PLANES-->
 			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-primary">
-					<p>
-						<i class="fas fa-tasks"></i>
-					</p>
+				<div class="counter red">
 					<h3><?php $prueba->showCountPlans(); ?></h3>
-					<p>PLANES</p>
+					<p>Nº PLANES</p>
 				</div>
 			</div>
+			<!--Nº USUARIOS-->
 			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-warning">
-					<p>
-						<i class="fas fa-spinner"></i>
-					</p>
+				<div class="counter red">
+
 					<h3><?php $prueba->showCountUser(); ?></h3>
-					<p>USUARIOS</p>
+					<p>Nº USUARIOS</p>
 				</div>
 			</div>
+			<!--CREAR USUARIO-->
 			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-success">
-					<p>
-						<i class="fas fa-check-circle"></i>
-					</p>
-					<button>Haz clic para ver el popup</button>
-					<h3>100+</h3>
-					<p>Completed</p>
+				<div class="counter red">
+					<h3>Crear Usuario</h3>
+					<button>Haz clic para crear Usuario</button>
 				</div>
 			</div>
+			<!--ELIMINAR USUARIO-->
 			<div class="col-3 col-m-6 col-sm-6">
-				<div class="counter bg-danger">
-					<p>
-						<i class="fas fa-bug"></i>
-					</p>
-					<h3>100+</h3>
-					<p>Issues</p>
+				<div class="counter red">
+					<h3>Crear Plan</h3>
+					<button>Haz clic para crear Plan</button>
 				</div>
 			</div>
 		</div>
+
+		<!--TABLA GRANDE-->
 		<div class="row">
 			<div class="col-8 col-m-12 col-sm-12">
 				<div class="card">
 					<div class="card-header">
 						<h3>
-							DATOS USUARIOS
+							Table
 						</h3>
-						<i class="fas fa-ellipsis-h"></i>
 					</div>
 					<div class="card-content">
 						<table>
@@ -122,20 +107,21 @@ $prueba = new Admin();
 									<th>CORREO</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="tablaUsuario">
 								<?php $prueba->showUser(); ?>
 							</tbody>
 						</table>
 					</div>
 				</div>
 			</div>
+
+			<!--TABLA PEQUEÑA-->
 			<div class="col-4 col-m-12 col-sm-12">
 				<div class="card">
 					<div class="card-header">
 						<h3>
-							DATOS PLANES
+							Table
 						</h3>
-						<i class="fas fa-ellipsis-h"></i>
 					</div>
 					<div class="card-content">
 						<table>
@@ -145,11 +131,27 @@ $prueba = new Admin();
 									<th>NOMBRE</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody id="tablaPlan">
 								<?php $prueba->showPlans(); ?>
 							</tbody>
 						</table>
 					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup-wrapper">
+			<div class="popup">
+				<div class="popup-close">x</div>
+				<div class="popup-content">
+					<form action="introduceUserAdmin.php" method="post" class="sign-in-form">
+						<p>Nombre: <input type="text" name="Nombre" size="30"></p>
+						<p>Correo: <input type="text" name="Correo" size="30"></p>
+						<p>Contraseña: <input type="text" name="Password" size="30"></p>
+
+						<p>
+							<input type="submit" value="Crear">
+						</p>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -158,43 +160,62 @@ $prueba = new Admin();
 			<div class="popup">
 				<div class="popup-close">x</div>
 				<div class="popup-content">
-					<h3>Ofertas libros JavaScript</h3>
-					<p>¡No te pierdas las mejores ofertas de libros para aprender JavaScript!</p>
-					<a href="https://amzn.to/2n9BJgk" target="_blank">¡Quiero verlos!</a>
-					<form>
-						<input type="radio" id="male" name="gender" value="male">
-						<label for="male">Male</label><br>
-						<input type="radio" id="female" name="gender" value="female">
-						<label for="female">Female</label><br>
-						<input type="radio" id="other" name="gender" value="other">
-						<label for="other">Other</label>
+					<form action="introducePlanAdmin.php" method="post" class="sign-in-form">
+						<p>Nombre-Plan: <input type="text" name="Nombre" size="30"></p>
+						<p>Descripción: <input type="text" name="Descripcion" size="30"></p>
+						<p>Localización: <input type="text" name="Localizacion" size="30"></p>
+						<p>Transporte: <input type="text" name="Transporte" size="30"></p>
+						<p>Categoría1: <input type="text" name="Categoria1" size="30"></p>
+						<p>Categoría2: <input type="text" name="Categoria2" size="30"></p>
+						<p>Precio: <input type="text" name="Precio" size="30"></p>
+
+						<p>
+							<input type="submit" value="Crear">
+						</p>
 					</form>
 				</div>
 			</div>
 		</div>
 
 		<script>
-			const button = document.querySelector('button');
-			const popup = document.querySelector('.popup-wrapper');
-			const close = document.querySelector('.popup-close');
+			const button = document.getElementsByTagName('button');
+			const popup = document.getElementsByClassName('popup-wrapper');
+			const close = document.getElementsByClassName('popup-close');
 
-			button.addEventListener('click', () => {
-				popup.style.display = 'block';
+			button[0].addEventListener('click', () => {
+				popup[0].style.display = 'block';
 			});
 
-			close.addEventListener('click', () => {
-				popup.style.display = 'none';
+			close[0].addEventListener('click', () => {
+				popup[0].style.display = 'none';
 			});
 
-			popup.addEventListener('click', e => {
+			popup[0].addEventListener('click', e => {
 				// console.log(e);
 				if (e.target.className === 'popup-wrapper') {
-					popup.style.display = 'none';
+					popup[0].style.display = 'none';
+				}
+			});
+
+			button[1].addEventListener('click', () => {
+				popup[1].style.display = 'block';
+			});
+
+			close[1].addEventListener('click', () => {
+				popup[1].style.display = 'none';
+			});
+
+			popup[1].addEventListener('click', e => {
+				// console.log(e);
+				if (e.target.className === 'popup-wrapper') {
+					popup[1].style.display = 'none';
 				}
 			});
 		</script>
-		<script src="index.js"></script>
-		<!-- end import script -->
+
+
+
+		<script src="js/index.js"></script>
 </body>
 
 </html>
