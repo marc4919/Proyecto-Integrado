@@ -1,5 +1,4 @@
-/* GENERAL
-=========================== */
+
 * {
 	box-sizing: border-box;
 }
@@ -9,8 +8,7 @@ body {
 	margin: 0;
 }
 
-/* NAVBAR
-=========================== */
+
 
 .navbar {
 	display: flex;
@@ -69,8 +67,6 @@ body {
 	border: 0.125px solid #f1f1f1;
 }
 
-/* CONTENT
-=========================== */
 
 .dropdown-expand {
 	display: flex;
