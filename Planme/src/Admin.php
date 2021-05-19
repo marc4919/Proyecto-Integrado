@@ -53,7 +53,7 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<div>";
-                echo "<p>" . $row["RecuentoUsuarios"] . "</p>";
+                echo "<p>" . ($row["RecuentoUsuarios"] - 1) . "</p>";
                 echo "</div>";
             }
         } else {
