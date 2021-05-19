@@ -24,6 +24,7 @@ body {
   height: 100px;
   list-style: none;
   font-size: 23px;
+margin-bottom: 1%;
 }
 
 .menu li a {
@@ -38,7 +39,7 @@ body {
 }
 
 .menu li a:hover {
-  color:rgb(173, 27, 27);
+  color: rgb(173, 27, 27);
   cursor: pointer;
   font-size: 25px;
 
@@ -98,7 +99,7 @@ body {
 .text {
   width: 600px;
   position: absolute;
-  top:43%;
+  top: 43%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: all 1s cubic-bezier(.87, .76, .33, .98);
@@ -106,6 +107,7 @@ body {
 
 
 .text .title {
+  font-family: 'Woodland', sans-serif;
   font-size: 80px;
   text-transform: uppercase;
   font-weight: 700;
@@ -137,8 +139,6 @@ body {
   outline: none;
   border-radius: 100px;
 }
-
-
 
 .hover-left .split.left .text {
   transform: translate(-40%, -50%);
