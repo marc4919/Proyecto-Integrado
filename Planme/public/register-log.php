@@ -16,7 +16,7 @@ if (isset($_SESSION['Nombre'])) {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/register-log.css" />
+  <link rel="stylesheet" href="css/register-log.css" />
   <title>Login/Register</title>
 </head>
 
@@ -66,7 +66,7 @@ if (isset($_SESSION['Nombre'])) {
             Registrarse
           </button>
         </div>
-        <img src="/img/register-log/valencia.jpg" class="image" alt="" />
+        <img src="img/register-log/valencia.jpg" class="image" alt="" />
       </div>
       <div class="panel right-panel">
         <div class="content">
@@ -78,7 +78,7 @@ if (isset($_SESSION['Nombre'])) {
             Iniciar Sesion
           </button>
         </div>
-        <img src="/img/register-log/party.png" class="image" alt="" />
+        <img src="img/register-log/party.png" class="image" alt="" />
       </div>
     </div>
   </div>

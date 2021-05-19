@@ -21,14 +21,14 @@ $prueba = new Admin();
 	<div class="navbar">
 
 		<li class="nav-item">
-			<img src="img/logo-adaptado.png">
+			<img src="img/dashboard/logo.png">
 		</li>
 
 		<!-- nav right -->
 		<ul class="nav-right">
 			<li>
 				<div class="dropdown">
-					<img src="img/user.png" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+					<img src="img/dashboard/admin.png" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
 					<ul id="user-menu" class="menu">
 						<li>
 							<a class="dropdown-menu-link">

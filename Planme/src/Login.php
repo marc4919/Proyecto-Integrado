@@ -22,7 +22,7 @@ class Login extends User
                         $_SESSION['PlanesMostrados'] = [];
                         array_push($_SESSION['PlanesMostrados'], 0);
                         if ($_SESSION['Usuario'] != 1) {
-                            header("location: ../public/selecciona.php");
+                            header("location: ../public/selecciona.html");
                         } else {
                             header("location: ../public/dashboard.php");
                         }
