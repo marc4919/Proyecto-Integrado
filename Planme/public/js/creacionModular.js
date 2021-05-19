@@ -16,6 +16,7 @@ function formular(formData) {
     const xhttp = new XMLHttpRequest();
     xhttp.addEventListener("readystatechange", function () {
       if (this.readyState == 4 && this.status == 200) {
+        console.log("HOLA");
       }
     });
     xhttp.open("POST", "introducePlan.php", true);

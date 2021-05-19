@@ -36,19 +36,19 @@ if (isset($_SESSION['Nombre'])) {
           </div>
           <input type="submit" value="Login" class="btn solid" />
         </form>
-        <form action="regis.php" class="sign-up-form">
+        <form action="regis.php" method="post" class="sign-up-form">
           <h2 class="title">Regístrate</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Nombre" />
+            <input type="text" placeholder="Nombre" name="Nombre" />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Correo" />
+            <input type="email" placeholder="Correo" name="Correo" />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" name="Password" />
           </div>
           <input type="submit" class="btn" value="Resgistrarse" />
         </form>
