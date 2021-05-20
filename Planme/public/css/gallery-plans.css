@@ -137,4 +137,65 @@ span {
   border: 1px black solid;
   margin: 10px;
   width: 30%;
+  height: 50%;
+}
+
+
+
+
+
+
+
+
+
+.wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+
+.card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: -1px 10px 30px -10px black;
+}
+
+
+
+#img-1 {
+    position: absolute;
+    margin-left: -45%;
+    margin-top: -8%;
+    z-index: 3;
+    max-width: 60px;
+    max-height: 60px;
+}
+
+
+h1 {
+  color: black;
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 12%;
+}
+
+.plandesdatos {
+    text-align: left;
+    margin-top: -2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2%;
+  }
+
+.plandescription {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 6%;
+  margin-right: 10%;
+  margin-bottom: 5%;
 }
