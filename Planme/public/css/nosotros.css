@@ -49,11 +49,10 @@
   }
   
   .logo {
-    max-width: 123px;
-    max-height: 130px;
+    margin-top: -30px;
+    height: 100px;
+    padding: 10px;
   }
-  
-
 p{
   
     text-decoration: dashed;

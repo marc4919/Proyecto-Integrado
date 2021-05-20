@@ -20,8 +20,8 @@ $obje = new UserAdmin();
   =============================== -->
   <nav>
     <ul class="menu">
-      <li><a href="inicio.html">Perfil</a></li>
-      <li><a href="#">About</a></li>
+      <li><a href="inicio.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
       <li><img class="logo" src="img/inicio/logo.png"></li>
       <li><a href="#">Contact</a></li>
       <li><a href="register-log.php">Login</a></li>
