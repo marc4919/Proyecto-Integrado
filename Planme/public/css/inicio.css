@@ -134,3 +134,35 @@ a {
     transition: 4s;
     transform: scale(1.3);
 }
+
+@media screen and (max-width: 640px){
+
+    .menu{
+        margin: 0 auto;
+    }
+    .menu li a{
+        font-size: 80%; 
+    }
+    .imagenes{
+       display: none;
+    }
+    .card{
+        margin:-15px;
+    }
+    .logo{
+        width: 80%;
+        height: auto;
+        margin-top: -12px;
+    }
+    .text-3 {
+        font-size: 10px;
+        margin: 20%
+    }
+    p{
+        font-size: 15px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: -66px;
+        margin-inline-end: -2px;
+    }
+}

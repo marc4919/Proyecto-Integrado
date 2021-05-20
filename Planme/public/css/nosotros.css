@@ -174,3 +174,29 @@ h2{
 }
 
 
+@media screen and (max-width: 640px){
+
+	.menu{
+		display: inline-flex;
+		margin: 0 auto;
+		display: inline-flex;
+    }
+    .menu li a{
+        font-size: 80%; 
+	}
+	.logo{
+        width: 80%;
+        height: auto;
+        margin-top: -12px;
+	}
+
+	.box h2 p{
+		font-size: small;
+	}
+
+	
+
+
+
+
+}
