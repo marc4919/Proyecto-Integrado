@@ -43,12 +43,11 @@ body {
   font-size: 25px;
 
 }
-
-.logo {
-	margin-top: -10px;
-  max-width: 123px;
-  max-height: 130px;
-}
+ .logo {
+    margin-top: -30px;
+    height: 100px;
+    padding: 10px;
+  }
 
 /* CONTENT
 =========================== */
