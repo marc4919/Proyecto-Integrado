@@ -24,7 +24,6 @@ body {
   height: 100px;
   list-style: none;
   font-size: 23px;
-margin-bottom: 1%;
 }
 
 .menu li a {
@@ -46,6 +45,7 @@ margin-bottom: 1%;
 }
 
 .logo {
+	margin-top: -10px;
   max-width: 123px;
   max-height: 130px;
 }

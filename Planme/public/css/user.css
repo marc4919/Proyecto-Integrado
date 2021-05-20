@@ -44,9 +44,11 @@ body {
   font-size: 25px;
 }
 
+
 .logo {
-  max-width: 123px;
-  max-height: 130px;
+  margin-top: -10px;
+  height: 60px;
+  padding: 10px;
 }
 
 /* CONTENT
