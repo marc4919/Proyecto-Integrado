@@ -32,7 +32,7 @@ class Register extends User
             echo '
             <script>
                 alert("Se ha registrado correctamente");
-                window.location=  "register-log.php";
+                window.location= "register-log.php";
             </script>
             ';
             echo "</br>";
