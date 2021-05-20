@@ -44,18 +44,14 @@ body {
   font-size: 25px;
 }
 
-
-  .logo {
-    margin-top: -30px;
-    height: 100px;
-    padding: 10px;
-  }
-
-
+.logo {
+  margin-top: -30px;
+  height: 100px;
+  padding: 10px;
+}
 
 /* CONTENT
 =========================== */
-
 
 .tab {
   width: 80%;
@@ -105,34 +101,40 @@ body {
   margin: 10px;
   width: 30%;
 }
-  span {
-font-size: 50px;
+span {
+  font-size: 50px;
   display: block;
-  text-shadow: 0px 0px 80px rgba(255, 255, 255, .5);
-  background: url("/img/gallery-plans/Text-Back.png") repeat-y;
+  text-shadow: 0px 0px 80px rgba(255, 255, 255, 0.5);
+  background: url("../img/gallery-plans/Text-Back.png") repeat-y;
   font-size: 500%;
   margin-left: 29%;
   margin-right: 26%;
 
+  -webkit-background-clip: text;
+  background-clip: text;
 
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
 
-	  -webkit-background-clip: text;
-	  background-clip: text;
-
-	  -webkit-text-fill-color: transparent;
-	  -webkit-animation: aitf 80s linear infinite;
-
-
-
-	  -webkit-transform: translate3d(0,0,0);
-	  -webkit-backface-visibility: hidden;
-
-  
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
 }
 
 /* Animate Background Image */
 
 @-webkit-keyframes aitf {
-	0% { background-position: 0% 50%; }
-	100% { background-position: 100% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.cajaPlan {
+  padding: 10px;
+  display: inline-table;
+  border: 1px black solid;
+  margin: 10px;
+  width: 30%;
 }
