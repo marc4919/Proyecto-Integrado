@@ -175,3 +175,16 @@ h2{
 }
 
 
+@media screen and (max-width: 640px){
+
+    .menu{
+		text-align: center;
+		
+	}
+	body{
+		background-image: fixed;
+	}
+	.box{
+		margin-right: 50%;
+	}
+}

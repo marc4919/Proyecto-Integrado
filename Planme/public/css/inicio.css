@@ -133,3 +133,23 @@ a {
     transition: 4s;
     transform: scale(1.3);
 }
+
+@media screen and (max-width: 640px){
+
+    .menu{
+        font-size: 11px;
+    }
+    h1{
+        font-size: 1.5em;
+
+    }
+    p{
+     font-size: 13px;   
+    }
+    .imagenes{
+       display: none;
+    }
+    .card{
+        margin:-15px;
+    }
+}
