@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +17,11 @@
   =============================== -->
     <nav class="flex juntify-center md:justify-end">
       <ul class="menu">
-        <li><a href="inicio-user.html">Inicio</a></li>
-        <li><a href="gallery-plans.html">Galeria</a></li>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
         <li><img class="logo" src="img/inicio/logo.PNG" width="100" height="78.99"></li>
-        <li><a href="crear.html">Creador</a></li>
-        <li><a href="inicio.html">Sing-Up</a></li>
+        <li><a href="faq.html">Faq</a></li>
+        <li><a href="register-log.php">Login</a></li>
       </ul>
     </nav>
 
@@ -44,7 +45,7 @@
 
         <!-- Imagenes Derecha -->
 
-        <a href="gallery-plans.html" class="card">
+        <a href="register-log.php" class="card">
           <div class="img">
             <div class="imagenes">
             <img class="img1" id="img-1" src="img/inicio/img1.png">

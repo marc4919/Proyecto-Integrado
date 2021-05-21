@@ -1,5 +1,9 @@
 
-
+<?php
+require_once "autoloader.php";
+session_start();
+$obje = new UserAdmin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan-Me</title>
     <link rel="stylesheet" href="css/gallery-plans.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/gallery.js"></script>
   <link rel="shortcut icon" href="img/inicio/logo.PNG">
     <title>Plan-Me | Galeria Planes</title>
@@ -18,11 +23,24 @@
   =============================== -->
     <nav>
         <ul class="menu">
-          <li><a href="inicio-user.html">Inicio</a></li>
-          <li><a href="gallery-plans.html">Galeria</a></li>
+          <li><a href="inicio-user.php">Inicio</a></li>
+          <li><a href="gallery-plans.php">Galeria</a></li>
           <li><img class="logo" src="img/inicio/logo.PNG" width="100" height="78.99"></li>
           <li><a href="crear.html">Creador</a></li>
-          <li><a href="inicio.html">Sing-Up</a></li>
+          <li>
+            <div class="dropdown">
+            <ul>
+             <button><img src="img/inicio/user.png" width="50" height="50" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+              <i class="fa fa-caret-down"></i>
+              </button>
+                <div class="dropdown-content">
+                        <a href="user.php"><span class="span1">Settings</span></a>
+                        <a href="/Planme/src/cerrarSeson.php"><span class="span1">Sing-Out</span></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
     </nav>
 
