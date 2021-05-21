@@ -21,12 +21,12 @@ class filtroNombre extends Plan
 
     public function showfiltrado()
     {
-        echo "<form action='' method='post' id ='filtroNombre' class='sign-in-form'>";
+        /* echo "<form action='' method='post' id ='filtroNombre' class='sign-in-form'>";
         echo "<p>Nombre: <input type='text' name='Nombre' size='30'> </p>";
         echo "<p>";
         echo "<input type='submit' value='Buscar'>";
         echo "</p>";
-        echo "</form>";
+        echo "</form>"; */
         // AÑADIR UN REINICIO DE ARRAY CUANDO ESTÁN TODOS GUARDADOS --
         $result = $this->filtrarNombre();
         if ($result->num_rows > 0) {

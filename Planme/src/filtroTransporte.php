@@ -14,7 +14,6 @@ class filtroTransporte extends Plan
     {
         $transporte = $_POST['Transporte'];
         $sql = "SELECT * FROM planes where Transporte = '" . $transporte . "'";
-        echo $sql;
         $result = $this->conn->query($sql);
         return $result;
     }
