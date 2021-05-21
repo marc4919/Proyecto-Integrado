@@ -33,7 +33,7 @@ session_destroy();
             </button>
               <div class="dropdown-content">
                       <a href="user.php"><span>Settings</span></a>
-                      <a href="inicio.html"><span>Sing-Out</span></a>
+                      <a href="inicio.php"><span>Sing-Out</span></a>
                 </div>
               </li>
             </ul>
