@@ -73,8 +73,10 @@ function refresh() {
 function botonGuardar() {
   let cajaPlan = document.getElementsByClassName("cajaPlan");
   let idPlan = document.getElementsByClassName("idPlan");
+  console.log(idPlan);
   for (let i = 0; i < idPlan.length; i++) {
     cajaPlan[i].addEventListener("click", function (e) {
+      console.log(20);
       e.preventDefault();
       e.stopPropagation();
       let identificador = idPlan[i].innerHTML;
@@ -99,7 +101,8 @@ function formularNombre(formData) {
   const xhttp = new XMLHttpRequest();
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
-      caja.innerHTML += xhttp.responseText;
+      caja.innerHTML = xhttp.responseText;
+      botonGuardar();
     }
   });
   xhttp.open("POST", "filtroNombre.php", true);
