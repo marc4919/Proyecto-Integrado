@@ -1,7 +1,4 @@
-<?php
-session_start();
-session_destroy();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +18,8 @@ session_destroy();
   =============================== -->
     <nav class="flex juntify-center md:justify-end">
       <ul class="menu">
-        <li><a href="inicio-user.html">Inicio</a></li>
-        <li><a href="gallery-plans.html">Galeria</a></li>
+        <li><a href="inicio-user.php">Inicio</a></li>
+        <li><a href="gallery-plans.php">Galeria</a></li>
         <li><img class="logo" src="img/inicio/logo.PNG" width="100" height="78.99"></li>
         <li><a href="crear.html">Creador</a></li>
         <li>
