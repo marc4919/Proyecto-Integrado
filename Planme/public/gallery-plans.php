@@ -68,7 +68,8 @@ $obje = new UserAdmin();
       <p>
         <input type="submit" value="Buscar">
       </p>
-      </form>
+    </form>
+    <div id="caja2"></div>
     </div>
 
     <div id="galeria3" class="tabcontent">
@@ -78,6 +79,7 @@ $obje = new UserAdmin();
           <input type="submit" value="Buscar">
         </p>
         </form>
+        <div id="caja3"></div>
     </div>
 
     <div id="galeria4" class="tabcontent">
@@ -87,6 +89,7 @@ $obje = new UserAdmin();
           <input type="submit" value="Buscar">
         </p>
         </form>
+        <div id="caja4"></div>
     </div>
 
     <div id="galeria5" class="tabcontent">
@@ -96,6 +99,7 @@ $obje = new UserAdmin();
           <input type="submit" value="Buscar">
         </p>
         </form>
+        <div id="caja5"></div>
     </div>
 
     <div id="galeria6" class="tabcontent">
@@ -108,6 +112,7 @@ $obje = new UserAdmin();
           <input type="submit" value="Buscar">
         </p>
         </form>
+        <div id="caja6"></div>
     </div>
 
     <!-- JS
