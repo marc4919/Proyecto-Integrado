@@ -13,11 +13,14 @@
         $result = $this->getUser();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='cajaGuardados'>";
-                echo "<h5>" . $row["Nombre"] . "</h5>";
-                echo "<p>" . $row["Descripcion"] . "</p>";
-                //echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
+                echo "<div class= 'cajaPlan'>";
+                echo "<div class= 'card'>";
+                echo "<img class='img' id='img-1' src='img/gallery-plans/circulo.png'>";
+                echo "<div class='planname'><h1>" . $row["Nombre"] . "</h1></div>";
+                echo "<div class='plandesdatos'>" . $row["Descripcion"] . "</div>";
+                echo "<div class='plandesdatos'>" . Staticos::formatoMoneda($row["Precio"]) . "</div>";
+                //echo "<div class='plandescription'>" . $row["Descripcion"] . "</div>";
+                echo "</div>";
                 echo "</div>";
             }
         } else {
@@ -37,11 +40,14 @@
         $result = $this->getCreation();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
-                echo "<div class='cajaCreados'>";
-                echo "<p>" . $row["Nombre"] . "</p>";
-                echo "<p>" . $row["Descripcion"] . "</p>";
-                //echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
+                echo "<div class= 'cajaPlan'>";
+                echo "<div class= 'card'>";
+                echo "<img class='img' id='img-1' src='img/gallery-plans/circulo.png'>";
+                echo "<div class='planname'><h1>" . $row["Nombre"] . "</h1></div>";
+                echo "<div class='plandesdatos'>" . $row["Descripcion"] . "</div>";
+                echo "<div class='plandesdatos'>" . Staticos::formatoMoneda($row["Precio"]) . "</div>";
+                //echo "<div class='plandescription'>" . $row["Descripcion"] . "</div>";
+                echo "</div>";
                 echo "</div>";
             }
         } else {
