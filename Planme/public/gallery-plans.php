@@ -1,5 +1,9 @@
 
-
+<?php
+require_once "autoloader.php";
+session_start();
+$obje = new UserAdmin();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +24,7 @@
     <nav>
         <ul class="menu">
           <li><a href="inicio-user.php">Inicio</a></li>
-          <li><a href="gallery-plans.html">Galeria</a></li>
+          <li><a href="gallery-plans.php">Galeria</a></li>
           <li><img class="logo" src="img/inicio/logo.PNG" width="100" height="78.99"></li>
           <li><a href="crear.html">Creador</a></li>
           <li>
@@ -31,7 +35,7 @@
               </button>
                 <div class="dropdown-content">
                         <a href="user.php"><span class="span1">Settings</span></a>
-                        <a href="inicio.html"><span class="span1">Sing-Out</span></a>
+                        <a href="/Planme/src/cerrarSeson.php"><span class="span1">Sing-Out</span></a>
                   </div>
                 </li>
               </ul>
