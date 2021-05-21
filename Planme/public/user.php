@@ -12,6 +12,7 @@ $obje = new UserAdmin();
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plan-Me</title>
   <link rel="stylesheet" href="css/user.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Indice</title>
 </head>
 
@@ -24,7 +25,20 @@ $obje = new UserAdmin();
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><img class="logo" src="img/inicio/logo.png"></li>
       <li><a href="#">Contact</a></li>
-      <li><a href="register-log.php">Login</a></li>
+      <li>
+          <div class="dropdown">
+          <ul>
+           <button><img src="img/inicio/user.png" width="50" height="50" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+            <i class="fa fa-caret-down"></i>
+            </button>
+              <div class="dropdown-content">
+                      <a href="user.php"><span>Settings</span></a>
+                      <a href="inicio.html"><span>Sing-Out</span></a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </li>
     </ul>
   </nav>
 
