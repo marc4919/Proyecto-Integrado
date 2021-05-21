@@ -35,48 +35,62 @@
 
     <div class="tab">
       <button class="tablinks" onclick="openCity(event, 'galeriaPrincipal')">Sin Filtros</button>
-      <button class="tablinks" onclick="openCity(event, '2')">Por Nombre</button>
-      <button class="tablinks" onclick="openCity(event, '3')">Por Precio</button>
-      <button class="tablinks" onclick="openCity(event, '4')">Por Transporte</button>
-      <button class="tablinks" onclick="openCity(event, '5')">Por Categoria</button>
-      <button class="tablinks" onclick="openCity(event, '6')">Filtrado Completo</button>
+      <button class="tablinks" onclick="openCity(event, 'galeriaSecundaria')">Por Nombre</button>
+      <button class="tablinks" onclick="openCity(event, 'galeria3')">Por Precio</button>
+      <button class="tablinks" onclick="openCity(event, 'galeria4')">Por Transporte</button>
+      <button class="tablinks" onclick="openCity(event, 'galeria5')">Por Categoria</button>
+      <button class="tablinks" onclick="openCity(event, 'galeria6')">Filtrado Completo</button>
     </div>
 
     <div id="galeriaPrincipal" class="tabcontent" style="display: block;">
-      <div class="wrapper">
-        <div class="card">
-            <img class="img" id="img-1" src="img/gallery-plans/circulo.png">
-
-
-            <div class="planname"><h1>Plan Name</h1></div>
-            <div class="plandesdatos">
-                Paco 1
-            </div>
-            <div class="plandesdatos">
-                Paco
-            </div>
-            <div class="plandescription">
-                The Barbarian is a kilt-clad Scottish warrior with an
-                angry, battle-ready expression, hungry for destruction.
-                He has Killer yellow horseshoe mustache.
-            </div>
-        </div> <!-- end clash-card barbarian-->
-    </div>
     </div>
 
-    <div id="2" class="tabcontent">
+    <div id="galeriaSecundaria" class="tabcontent">
+      <form action="" method="post" id ="filtroNombre" class="sign-in-form">
+      <p>Nombre: <input type="text" name="Nombre" size="30"> </p>
+      <p>
+        <input type="submit" value="Buscar">
+      </p>
+      </form>
     </div>
 
-    <div id="3" class="tabcontent">
+    <div id="galeria3" class="tabcontent">
+      <form action="" method="post" id ="filtroPrecio" class="sign-in-form">
+        <p>Precio: <input type="text" name="Precio" size="30"> </p>
+        <p>
+          <input type="submit" value="Buscar">
+        </p>
+        </form>
     </div>
 
-    <div id="4" class="tabcontent">
+    <div id="galeria4" class="tabcontent">
+      <form action="" method="post" id ="filtroTransporte" class="sign-in-form">
+        <p>Transporte: <input type="text" name="Transporte" size="30"></p>
+        <p>
+          <input type="submit" value="Buscar">
+        </p>
+        </form>
     </div>
 
-    <div id="5" class="tabcontent">
+    <div id="galeria5" class="tabcontent">
+      <form action="" method="post" id ="filtroCategoria" class="sign-in-form">
+        <p>Categoría: <input type="text" name="Categoria" size="30"></p>
+        <p>
+          <input type="submit" value="Buscar">
+        </p>
+        </form>
     </div>
 
-    <div id="6" class="tabcontent">
+    <div id="galeria6" class="tabcontent">
+      <form action="" method="post" id ="filtroCompleto" class="sign-in-form">
+        <p>Nombre: <input type="text" name="Nombre" size="30"></p>
+        <p>Precio: <input type="text" name="Precio" size="30"></p>
+        <p>Transporte: <input type="text" name="Transporte" size="30"></p>
+        <p>Categoría: <input type="text" name="Categoria" size="30"></p>
+        <p>
+          <input type="submit" value="Buscar">
+        </p>
+        </form>
     </div>
 
     <!-- JS

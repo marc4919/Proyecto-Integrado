@@ -20,29 +20,24 @@ class galleryPlan extends Plan
     public function showPlans()
     {
         // AÑADIR UN REINICIO DE ARRAY CUANDO ESTÁN TODOS GUARDADOS --
-
+        echo "<button id='Borrado'>Refresh</button>";
         $result = $this->getPlans();
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<div class= 'cajaPlan'>";
-                echo "<p hidden class= 'idPlan'>" . $row["ID_PLAN"] . "</p>";
-                echo "<p>" . $row["Nombre"] . "</p>";
-                //echo "<p>" . $row["Descripcion"] . "</p>";
-                echo "<p>" . $row["Localizacion"] . "</p>";
-                echo "<p>" . $row["Transporte"] . "</p>";
-                //echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
-                echo "</pre>";
+                echo "<div class= 'card'>";
+                echo "<img class='img' id='img-1' src='img/gallery-plans/circulo.png'>";
+                echo "<div class='planname'><h1>" . $row["Nombre"] . "</h1></div>";
+                echo "<div class='plandesdatos'>" . $row["Transporte"] . "</div>";
+                echo "<div class='plandesdatos'>" . Staticos::formatoMoneda($row["Precio"]) . "</div>";
+                //echo "<div class='plandescription'>" . $row["Descripcion"] . "</div>";
+                echo "</div>";
                 echo "</div>";
                 array_push($_SESSION['PlanesMostrados'], $row['ID_PLAN']);
             }
         } else {
             echo "no hay resultados";
         }
-
-        echo "</br>";
-        echo "<span id='Borrado'>Refresh</span>";
         // HABRÍA QUE HACER OTRO MÉTODO PARA ESTO RETURNEANDO EL ARRAY $planesAparecidos --- MGT
         /* for ($i = 0; $i <= 5; $i++) {
             $result = $this->getPlans();
