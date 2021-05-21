@@ -1,122 +1,175 @@
-  /* GENERAL
+/* GENERAL
 =========================== */
-  * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  body {
-      font-weight: 300;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      font-family: "Poppins", sans-serif;
-  }
+body {
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-family: "Poppins", sans-serif;
+}
 
-  /* NAVBAR
+/* NAVBAR
   =========================== */
-  .menu {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 720px;
-      margin: 0 auto;
-      height: 100px;
-      list-style: none;
-      font-size: 23px;
-      margin-bottom: 2%;
-  }
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
+  height: 100px;
+  list-style: none;
+  font-size: 23px;
+  margin-bottom: 2%;
+}
 
-  .menu li a {
-      text-decoration: none;
-      color: black;
-  }
+.menu li a {
+  text-decoration: none;
+  color: black;
+}
 
-  .menu li {
-      width: 125px;
-      height: 50px;
-      text-align: center;
-  }
+.menu li {
+  width: 125px;
+  height: 50px;
+  text-align: center;
+}
 
-  .menu li a:hover {
-      color: rgb(173, 27, 27);
-      cursor: pointer;
-      font-size: 25px;
-  }
+.menu li a:hover {
+  color: rgb(173, 27, 27);
+  cursor: pointer;
+  font-size: 25px;
+}
 
-  .logo {
-      margin-top: -30px;
-      height: 100px;
-      padding: 10px;
-  }
+.logo {
+  margin-top: -30px;
+  height: 100px;
+  padding: 10px;
+}
 
-    /* CONTENDOR
+/* CONTENDOR
   =========================== */
 
-  /*
+/*
              * propiedades de las cajas (arrastrables)
              */
-  div[id ^='caja'] 
-  {
-      width: 330px;
-      height: auto;
-      background: rgba(204, 0, 0, 0.8);
-      border: 3px solid rgba(204, 0, 0, 1);
-      margin: 5px auto;
-      padding: 5px;
-      color: #FFF;
-  }
+div[id^="caja"] {
+  width: 330px;
+  height: auto;
+  background: rgba(204, 0, 0, 0.8);
+  border: 3px solid rgba(204, 0, 0, 1);
+  margin: 5px auto;
+  padding: 5px;
+  color: #fff;
+}
 
-  textarea[id ^='caja'] {
-      width: 330px;
-      border-radius: 15px;
-      height: auto;
-      background: rgba(204, 0, 0, 0.8);
-      border: 3px solid rgba(204, 0, 0, 1);
-      margin: 5px auto;
-      padding: 5px;
-      color: #FFF;
-      resize: none;
+textarea[id^="caja"] {
+  width: 330px;
+  border-radius: 15px;
+  height: auto;
+  background: rgba(204, 0, 0, 0.8);
+  border: 3px solid rgba(204, 0, 0, 1);
+  margin: 5px auto;
+  padding: 5px;
+  color: #fff;
+  resize: none;
+}
 
-  }
-
-  /*
+/*
              * propiedades que van a tomar el elemento arrastrable luego de que  este se suelte dentro de su contenedor
              */
-  div[id ^='contenedor'] div[id ^='caja'] {
-      background: rgba(0, 178, 255, 0.8);
-      border: 3px solid  rgba(0, 178, 255, 1);
-      border-radius: 15px;
-      float: right;
-  }
+div[id^="contenedor"] div[id^="caja"] {
+  background: rgba(0, 178, 255, 0.8);
+  border: 3px solid rgba(0, 178, 255, 1);
+  border-radius: 15px;
+  float: right;
+}
 
-  div[id ^='contenedor'] div[id ^='caja'] span {
-      color: #FFF;
-  }
+div[id^="contenedor"] div[id^="caja"] span {
+  color: #fff;
+}
 
-  /*
+/*
              * propiedades del contenedor
              */
-  div[class ^='contenedor'] {
+div[class^="contenedor"] {
+  width: 350px;
+  height: 500px;
+  border-radius: 15px;
+  background: rgba(38, 104, 127, 0.8);
+  border: 3px solid rgba(38, 104, 127, 1);
+  margin: 5px auto;
+  padding: 5px;
+}
 
-      width: 350px;
-      height: 500px;
-      border-radius: 15px;
-      background: rgba(38, 104, 127, 0.8);
-      border: 3px solid rgba(38, 104, 127, 1);
-      margin: 5px auto;
-      padding: 5px;
-  }
+#contenedor1 {
+  float: left;
+}
 
-  #contenedor1 {
-      float: left;
-  }
+#contenedor {
+  float: right;
+}
 
-  #contenedor {
-      float: right;
-  }
+#almacenaje {
+  width: 800px;
+  margin: auto;
+}
 
-  #almacenaje {
-      width: 800px;
-      margin: auto;
-  }
+.dropdown {
+  float: right;
+  margin-right: 30px;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: red;
+  padding: 14px 16px;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+button {
+  border: none;
+  background-color: white;
+}
+a .span1 {
+  font-size: 23px;
+  margin: auto;
+}

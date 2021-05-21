@@ -41,7 +41,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="user.php"><span>Settings</span></a>
+              <a href="user.php"><span>Perfil</span></a>
               <a href="../src/cerrarSesion.php"><span>Sing-Out</span></a>
             </div>
       </li>

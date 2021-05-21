@@ -43,7 +43,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="user.php"><span class="span1">Settings</span></a>
+              <a href="user.php"><span class="span1">Perfil</span></a>
               <a href="../src/cerrarSesion.php"><span class="span1">Sing-Out</span></a>
             </div>
       </li>
@@ -75,7 +75,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
     <form action="" method="post" id="filtroNombre" class="sign-in-form">
       <p>Nombre: <input type="text" name="Nombre" size="30"> </p>
       <p>
-        <input type="submit" value="Buscar">
+        <input type="submit" value="Filtrar">
       </p>
     </form>
     <div id="caja2"></div>
@@ -83,9 +83,16 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
 
   <div id="galeria3" class="tabcontent">
     <form action="" method="post" id="filtroPrecio" class="sign-in-form">
-      <p>Precio: <input type="text" name="Precio" size="30"> </p>
+      <p>Precio:
+      <div class="center">
+        <div class="form-element">
+          <div id="rangeValue">0</div>
+          <input type="range" min="0" max="300" value="0" name="Precio" oninput="rangeValue.innerText = this.value">
+        </div>
+      </div>
+      </p>
       <p>
-        <input type="submit" value="Buscar">
+        <input type="submit" value="Filtrar">
       </p>
     </form>
     <div id="caja3"></div>
@@ -93,9 +100,12 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
 
   <div id="galeria4" class="tabcontent">
     <form action="" method="post" id="filtroTransporte" class="sign-in-form">
-      <p>Transporte: <input type="text" name="Transporte" size="30"></p>
+      <p>Transporte:</p> <label><input type="radio" name="Transporte" value="Cualquiera"> Cualquiera </label>
+      <label><input type="radio" name="Transporte" value="Coche"> Coche </label>
+      <label><input type="radio" name="Transporte" value="Coche, Autobús, Metro"> Coche, Autobús y Metro</label>
+
       <p>
-        <input type="submit" value="Buscar">
+        <input type="submit" value="Filtrar">
       </p>
     </form>
     <div id="caja4"></div>
@@ -103,9 +113,22 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
 
   <div id="galeria5" class="tabcontent">
     <form action="" method="post" id="filtroCategoria" class="sign-in-form">
-      <p>Categoría: <input type="text" name="Categoria" size="30"></p>
+      <p>Categoría: <select class="paquete" name="Categoria">
+          <option value="Ocio">Ocio</option>
+          <option value="Naturaleza">Naturaleza</option>
+          <option value="Degustación">Degustación</option>
+          <option value="Turismo">Turismo</option>
+          <option value="Diversión en Familia">Diversión en Familia</option>
+          <option value="Paisaje">Paisaje</option>
+          <option value="Adrenalina">Adrenalina</option>
+          <option value="Comida">Comida</option>
+          <option value="Entretenimiento">Entretenimiento</option>
+          <option value="Deporte">Deporte</option>
+          <option value="Ruta">Ruta</option>
+          <option value="Belleza">Belleza</option>
+        </select></p>
       <p>
-        <input type="submit" value="Buscar">
+        <input type="submit" value="Filtrar">
       </p>
     </form>
     <div id="caja5"></div>
@@ -113,13 +136,28 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
 
   <div id="galeria6" class="tabcontent">
     <form action="" method="post" id="filtroCompleto" class="sign-in-form">
-      <p>Nombre: <input type="text" name="Nombre" size="30"></p>
-      <p>Precio: <input type="text" name="Precio" size="30"></p>
-      <p>Transporte: <input type="text" name="Transporte" size="30"></p>
-      <p>Categoría: <input type="text" name="Categoria" size="30"></p>
-      <p>
-        <input type="submit" value="Buscar">
-      </p>
+      <Precio:>Nombre: <input type="text" name="Nombre" size="30"> Precio: <input type="text" name="Precio" size="30"></p>
+        <p>Transporte:</p> <label><input type="radio" name="Transporte" value="Cualquiera"> Cualquiera </label>
+        <label><input type="radio" name="Transporte" value="Coche"> Coche </label>
+        <label><input type="radio" name="Transporte" value="Coche, Autobús, Metro"> Coche, Autobús y Metro</label>
+
+        <p>Categoría: <select class="paquete" name="Categoria">
+            <option value="Ocio">Ocio</option>
+            <option value="Naturaleza">Naturaleza</option>
+            <option value="Degustación">Degustación</option>
+            <option value="Turismo">Turismo</option>
+            <option value="Diversión en Familia">Diversión en Familia</option>
+            <option value="Paisaje">Paisaje</option>
+            <option value="Adrenalina">Adrenalina</option>
+            <option value="Comida">Comida</option>
+            <option value="Entretenimiento">Entretenimiento</option>
+            <option value="Deporte">Deporte</option>
+            <option value="Ruta">Ruta</option>
+            <option value="Belleza">Belleza</option>
+          </select></p>
+        <p>
+          <input type="submit" value="Filtrar">
+        </p>
     </form>
     <div id="caja6"></div>
   </div>

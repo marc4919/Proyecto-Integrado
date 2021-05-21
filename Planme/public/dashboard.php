@@ -31,7 +31,7 @@ $prueba = new Admin();
 					<img src="img/dashboard/admin.png" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
 					<ul id="user-menu" class="menu">
 						<li class="dropdown-menu-item">
-							<a href="inicio.html" class="dropdown-menu-link">
+							<a href="inicio.php" class="dropdown-menu-link">
 								<div>
 									<i></i>
 								</div>
