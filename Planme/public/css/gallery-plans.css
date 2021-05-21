@@ -56,16 +56,17 @@ body {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
   border: none;
   outline: none;
   color: red;
   padding: 14px 16px;
-  font-family:'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
   background-color: red;
 }
 
@@ -95,11 +96,11 @@ body {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-button{
+button {
   border: none;
   background-color: white;
 }
-a .span1{
+a .span1 {
   font-size: 23px;
   margin: auto;
 }
@@ -236,4 +237,33 @@ h1 {
 
 #Borrado {
   display: block;
+}
+
+.form-element #rangeValue {
+  margin-bottom: -10px;
+  font-size: 50px;
+  font-family: "Raleway";
+  color: #222;
+}
+.form-element input[type="range"] {
+  -webkit-appearance: none;
+  width: 300px;
+  height: 40px;
+  border-radius: 15px;
+  background: #222;
+  outline: none;
+  overflow: hidden;
+}
+.form-element input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  background: rgb(173, 27, 27);
+  border-radius: 10px;
+  box-shadow: -350px 0px 0px 340px rgb(173, 27, 27);
+  cursor: pointer;
+}
+
+label {
+  margin: 10px;
 }

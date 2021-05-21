@@ -40,7 +40,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="user.php"><span class="span1">Settings</span></a>
+              <a href="user.php"><span class="span1">Perfil</span></a>
               <a href="../src/cerrarSesion.php"><span class="span1">Sing-Out</span></a>
             </div>
       </li>
@@ -67,7 +67,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
       <div class="text">
         <h1 class="title">Elige un plan</h1>
         <p class="desc"><br><br>Puedes seleccionar entre uno de nuestros<br> planes, contamos con mas de 100 planes<br> predeterminados.</p>
-        <a href="galeria.html"><button class="button">Seleccionar Plan</button></a>
+        <a href="gallery-plans.php"><button class="button">Seleccionar Plan</button></a>
       </div>
     </div>
   </div>

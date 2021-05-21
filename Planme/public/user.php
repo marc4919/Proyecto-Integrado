@@ -22,23 +22,22 @@ $obje = new UserAdmin();
   <nav>
     <ul class="menu">
       <li><a href="inicio-user.php">Inicio</a></li>
-     <li><a href="gallery-plans.php">Galeria</a></li>
+      <li><a href="gallery-plans.php">Galeria</a></li>
       <li><img class="logo" src="img/inicio/logo.png"></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="crear.html">Creador</a></li>
       <li>
-          <div class="dropdown">
+        <div class="dropdown">
           <ul>
-           <button><img src="img/inicio/user.png" width="50" height="50" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
-            <i class="fa fa-caret-down"></i>
+            <button><img src="img/inicio/user.png" width="50" height="50" alt="User image" class="dropdown-toggle" data-toggle="user-menu">
+              <i class="fa fa-caret-down"></i>
             </button>
-              <div class="dropdown-content">
-                      <a href="user.php"><span>Settings</span></a>
-                      <a href="inicio.php"><span>Sing-Out</span></a>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </li>
+            <div class="dropdown-content">
+              <a href="inicio.php"><span>Sing-Out</span></a>
+            </div>
+      </li>
+    </ul>
+    </div>
+    </li>
     </ul>
   </nav>
 
@@ -50,6 +49,7 @@ $obje = new UserAdmin();
   <span class="caja">
     <h2 class="perfil-nombre"><?php echo $_SESSION['NombreUsuario']; ?></h2>
   </span>
+  <button id="ajustes"> Ajustes</button>
 
 
 
@@ -69,6 +69,54 @@ $obje = new UserAdmin();
     <?php $obje->showCreation(); ?>
   </div>
 
+
+
+
+  <div class="popup-wrapper">
+    <div class="popup">
+      <div class="popup-close">x</div>
+      <div class="popup-content">
+        <form action="ajustesUsuario.php" method="post" class="sign-in-form">
+          <p>Nombre: <input type="text" name="Nombre" size="30" value="<?php
+                                                                        require_once "autoloader.php";
+                                                                        $obje = new AjustesUser();
+                                                                        $obje->showName(); ?>"></p>
+          <p>Correo: <input type="text" name="Correo" size="30" value="<?php
+                                                                        require_once "autoloader.php";
+                                                                        $obje = new AjustesUser();
+                                                                        $obje->showCorreo(); ?>"></p>
+          <p>Contraseña: <input type="text" name="Password" size="30" value="<?php
+                                                                              require_once "autoloader.php";
+                                                                              $obje = new AjustesUser();
+                                                                              $obje->showPassword(); ?>"></p>
+          <input type="submit" value="Crear">
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const button = document.getElementById('ajustes');
+    const popup = document.getElementsByClassName('popup-wrapper');
+    const close = document.getElementsByClassName('popup-close');
+
+    button.addEventListener('click', () => {
+      console.log(1);
+      popup[0].style.display = 'block';
+    });
+
+    close[0].addEventListener('click', () => {
+      popup[0].style.display = 'none';
+    });
+
+    popup[0].addEventListener('click', e => {
+      // console.log(e);
+      if (e.target.className === 'popup-wrapper') {
+        popup[0].style.display = 'none';
+      }
+    });
+  </script>
 
 
 
