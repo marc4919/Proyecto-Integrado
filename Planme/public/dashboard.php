@@ -21,7 +21,7 @@ $prueba = new Admin();
 	<div class="navbar">
 
 		<li class="nav-item">
-			<img src="img/dashboard/logo.png">
+			<img class="logo" src="img/dashboard/logo.png">
 		</li>
 
 		<!-- nav right -->
