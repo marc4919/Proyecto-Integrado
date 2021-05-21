@@ -20,9 +20,10 @@ class galleryPlan extends Plan
     public function showPlans()
     {
         // AÑADIR UN REINICIO DE ARRAY CUANDO ESTÁN TODOS GUARDADOS --
-        echo "<button id='Borrado'>Refresh</button>";
+
         $result = $this->getPlans();
         if ($result->num_rows > 0) {
+            echo "<button id='Borrado'>Refresh</button>";
             while ($row = $result->fetch_assoc()) {
                 echo "<div class= 'cajaPlan'>";
                 echo "<div class= 'card'>";
