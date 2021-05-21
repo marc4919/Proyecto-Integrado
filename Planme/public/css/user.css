@@ -44,63 +44,63 @@ body {
   font-size: 25px;
 }
 
+.logo {
+  margin-top: -30px;
+  height: 100px;
+  padding: 10px;
+}
 
- .logo {
-    margin-top: -30px;
-    height: 100px;
-    padding: 10px;
-  }
+.dropdown {
+  float: right;
+  margin-right: 30px;
+  overflow: hidden;
+}
 
-  .dropdown {
-    float: right;
-    margin-right: 30px;
-    overflow: hidden;
-  }
-  
-  .dropdown .dropbtn {
-    font-size: 16px;  
-    border: none;
-    outline: none;
-    color: red;
-    padding: 14px 16px;
-    font-family:'Poppins', sans-serif;
-    margin: 0;
-  }
-  
-  .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-  }
-  
-  .dropdown-content {
-    display: none;
-    border-radius: 20px;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #ddd;
-    border-radius: 20px;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  button{
-    border: none;
-    background-color: white;
-  }
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: red;
+  padding: 14px 16px;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  border-radius: 20px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+button {
+  border: none;
+  background-color: white;
+}
 
 /* CONTENT
 =========================== */
@@ -165,4 +165,57 @@ body {
   border: 1px black solid;
   margin: 10px;
   width: 30%;
+}
+
+.cajaPlan {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: inline-table;
+  margin: 10px;
+}
+
+.card {
+  background: white;
+  width: 300px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: -1px 10px 30px -10px black;
+}
+
+#img-1 {
+  position: absolute;
+  margin-left: -45%;
+  margin-top: -8%;
+  z-index: 3;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+h1 {
+  color: black;
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 12%;
+}
+
+.plandesdatos {
+  text-align: left;
+  margin-top: -2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2%;
+}
+
+.plandescription {
+  text-align: left;
+  margin-left: 10%;
+  margin-top: 6%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+}
+
+#Borrado {
+  display: block;
 }
