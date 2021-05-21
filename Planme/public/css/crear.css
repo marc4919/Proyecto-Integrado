@@ -1,0 +1,122 @@
+  /* GENERAL
+=========================== */
+  * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-weight: 300;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-family: "Poppins", sans-serif;
+  }
+
+  /* NAVBAR
+  =========================== */
+  .menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 720px;
+      margin: 0 auto;
+      height: 100px;
+      list-style: none;
+      font-size: 23px;
+      margin-bottom: 2%;
+  }
+
+  .menu li a {
+      text-decoration: none;
+      color: black;
+  }
+
+  .menu li {
+      width: 125px;
+      height: 50px;
+      text-align: center;
+  }
+
+  .menu li a:hover {
+      color: rgb(173, 27, 27);
+      cursor: pointer;
+      font-size: 25px;
+  }
+
+  .logo {
+      margin-top: -30px;
+      height: 100px;
+      padding: 10px;
+  }
+
+    /* CONTENDOR
+  =========================== */
+
+  /*
+             * propiedades de las cajas (arrastrables)
+             */
+  div[id ^='caja'] 
+  {
+      width: 330px;
+      height: auto;
+      background: rgba(204, 0, 0, 0.8);
+      border: 3px solid rgba(204, 0, 0, 1);
+      margin: 5px auto;
+      padding: 5px;
+      color: #FFF;
+  }
+
+  textarea[id ^='caja'] {
+      width: 330px;
+      border-radius: 15px;
+      height: auto;
+      background: rgba(204, 0, 0, 0.8);
+      border: 3px solid rgba(204, 0, 0, 1);
+      margin: 5px auto;
+      padding: 5px;
+      color: #FFF;
+      resize: none;
+
+  }
+
+  /*
+             * propiedades que van a tomar el elemento arrastrable luego de que  este se suelte dentro de su contenedor
+             */
+  div[id ^='contenedor'] div[id ^='caja'] {
+      background: rgba(0, 178, 255, 0.8);
+      border: 3px solid  rgba(0, 178, 255, 1);
+      border-radius: 15px;
+      float: right;
+  }
+
+  div[id ^='contenedor'] div[id ^='caja'] span {
+      color: #FFF;
+  }
+
+  /*
+             * propiedades del contenedor
+             */
+  div[class ^='contenedor'] {
+
+      width: 350px;
+      height: 500px;
+      border-radius: 15px;
+      background: rgba(38, 104, 127, 0.8);
+      border: 3px solid rgba(38, 104, 127, 1);
+      margin: 5px auto;
+      padding: 5px;
+  }
+
+  #contenedor1 {
+      float: left;
+  }
+
+  #contenedor {
+      float: right;
+  }
+
+  #almacenaje {
+      width: 800px;
+      margin: auto;
+  }

@@ -73,8 +73,10 @@ function refresh() {
 function botonGuardar() {
   let cajaPlan = document.getElementsByClassName("cajaPlan");
   let idPlan = document.getElementsByClassName("idPlan");
+  console.log(idPlan);
   for (let i = 0; i < idPlan.length; i++) {
     cajaPlan[i].addEventListener("click", function (e) {
+      console.log(20);
       e.preventDefault();
       e.stopPropagation();
       let identificador = idPlan[i].innerHTML;
@@ -95,11 +97,12 @@ function guardar(identificador) {
 }
 
 function formularNombre(formData) {
-  caja = document.getElementById("galeriaSecundaria");
+  caja = document.getElementById("caja2");
   const xhttp = new XMLHttpRequest();
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
-      caja.innerHTML += xhttp.responseText;
+      caja.innerHTML = xhttp.responseText;
+      botonGuardar();
     }
   });
   xhttp.open("POST", "filtroNombre.php", true);
@@ -107,11 +110,11 @@ function formularNombre(formData) {
 }
 
 function formularPrecio(formData) {
-  caja = document.getElementById("galeria3");
+  caja = document.getElementById("caja3");
   const xhttp = new XMLHttpRequest();
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
-      caja.innerHTML += xhttp.responseText;
+      caja.innerHTML = xhttp.responseText;
     }
   });
   xhttp.open("POST", "filtroPrecio.php", true);
@@ -119,11 +122,11 @@ function formularPrecio(formData) {
 }
 
 function formularTransporte(formData) {
-  caja = document.getElementById("galeria4");
+  caja = document.getElementById("caja4");
   const xhttp = new XMLHttpRequest();
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
-      caja.innerHTML += xhttp.responseText;
+      caja.innerHTML = xhttp.responseText;
     }
   });
   xhttp.open("POST", "filtroTransporte.php", true);
@@ -131,11 +134,11 @@ function formularTransporte(formData) {
 }
 
 function formularCategoria(formData) {
-  caja = document.getElementById("galeria5");
+  caja = document.getElementById("caja5");
   const xhttp = new XMLHttpRequest();
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
-      caja.innerHTML += xhttp.responseText;
+      caja.innerHTML = xhttp.responseText;
     }
   });
   xhttp.open("POST", "filtroCategoria1.php", true);
@@ -143,11 +146,11 @@ function formularCategoria(formData) {
 }
 
 function formularCompleto(formData) {
-  caja = document.getElementById("galeria6");
+  caja = document.getElementById("caja6");
   const xhttp = new XMLHttpRequest();
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
-      caja.innerHTML += xhttp.responseText;
+      caja.innerHTML = xhttp.responseText;
     }
   });
   xhttp.open("POST", "filtroCompleto.php", true);

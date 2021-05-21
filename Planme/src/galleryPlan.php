@@ -20,12 +20,14 @@ class galleryPlan extends Plan
     public function showPlans()
     {
         // AÑADIR UN REINICIO DE ARRAY CUANDO ESTÁN TODOS GUARDADOS --
-        echo "<button id='Borrado'>Refresh</button>";
+
         $result = $this->getPlans();
         if ($result->num_rows > 0) {
+            echo "<button id='Borrado'>Refresh</button>";
             while ($row = $result->fetch_assoc()) {
                 echo "<div class= 'cajaPlan'>";
                 echo "<div class= 'card'>";
+                echo "<p hidden class= 'idPlan'>" . $row["ID_PLAN"] . "</p>";
                 echo "<img class='img' id='img-1' src='img/gallery-plans/circulo.png'>";
                 echo "<div class='planname'><h1>" . $row["Nombre"] . "</h1></div>";
                 echo "<div class='plandesdatos'>" . $row["Transporte"] . "</div>";
@@ -36,7 +38,9 @@ class galleryPlan extends Plan
                 array_push($_SESSION['PlanesMostrados'], $row['ID_PLAN']);
             }
         } else {
-            echo "no hay resultados";
+            $_SESSION['PlanesMostrados'] = [];
+            array_push($_SESSION['PlanesMostrados'], 0);
+            $this->showPlans();
         }
         // HABRÍA QUE HACER OTRO MÉTODO PARA ESTO RETURNEANDO EL ARRAY $planesAparecidos --- MGT
         /* for ($i = 0; $i <= 5; $i++) {
@@ -65,35 +69,6 @@ class galleryPlan extends Plan
         } */
     }
 
-    public function updatePlans()
-    {
-        // LA MAGIA - MGT ------------ AÑADIRLO COMO ATRIBUTO DE LA CLASE ---------
-        for ($i = 0; $i <= 2; $i++) {
-            $result = $this->getPlans();
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    if (in_array($row["Nombre"], $this->planesAparecidos)) {
-                        $i--;
-                    } else {
-
-                        echo "<div>";
-                        echo "<p>" . $row["Nombre"] . "</p>";
-                        //echo "<p>" . $row["Descripcion"] . "</p>";
-                        echo "<p>" . $row["Localizacion"] . "</p>";
-                        echo "<p>" . $row["Transporte"] . "</p>";
-                        //echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                        //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                        echo "<p>" . Staticos::formatoMoneda($row["Precio"]) . "</p>";
-                        echo "</div>";
-                        $this->putInArray($row["Nombre"]);
-                        print_r($this->planesAparecidos);
-                    }
-                }
-            } else {
-                echo "no hay resultados";
-            }
-        }
-    }
 
     public function savePlans($id)
     {

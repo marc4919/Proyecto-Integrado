@@ -1,81 +1,40 @@
+
+
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <script src="js/creacionModular.js"></script>
-        <meta charset="utf-8">
-        <title>Proyecto-Integrado</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="estilo.css">
-        <style>
-            /*
-             * propiedades de las cajas (arrastrables)
-             */
-             div[id ^='caja'] {
-                width:330px;
-                height:auto;
-                background:rgba(204, 0, 0, 0.8);
-                border: 3px solid rgba(204, 0, 0, 1);
-                margin:5px auto;
-                padding:5px;
-                color:#FFF;
-            }
-            
-            textarea[id ^='caja'] {
-                width:330px;
-                height:auto;
-                background:rgba(204, 0, 0, 0.8);
-                border: 3px solid rgba(204, 0, 0, 1);
-                margin:5px auto;
-                padding:5px;
-                color:#FFF;
-            }
-            
-            /*
-             * propiedades que van a tomar el elemento arrastrable luego de que  este se suelte dentro de su contenedor
-             */
-            div[id ^='contenedor'] div[id ^='caja'] {	
-                background:rgba(0,178,255,0.8);
-                border: 3px solid rgba(0,178,255, 1);
-                float:right;
-            }
-            div[id ^='contenedor'] div[id ^='caja'] span {
-                color:#FFF;
-            }
-            
-            /*
-             * propiedades del contenedor
-             */
-            div[class ^='contenedor'] {
-                
-                width:350px;
-                height:500px;
-                background:rgba(38,104,127,0.8);
-                border: 3px solid rgba(38,104,127, 1);
-                margin:5px auto;
-                padding:5px;
-            }
+<html lang="en">
 
-            #contenedor1{
-                float:left;
-            }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/crear.css">
+    <script src="js/creacionModular.js"></script>
+    <link rel="shortcut icon" href="img/inicio/logo.PNG">
+    <title>Plan-Me | Creador Plan</title>
+</head>
 
-            #contenedor{
-                float:right;
-            }
+  <body>
+    <!-- NAVBAR
+  =============================== -->
+    <nav>
+        <ul class="menu">
+          <li><a href="inicio-user.html">Inicio</a></li>
+          <li><a href="gallery-plans.html">Galeria</a></li>
+          <li><img class="logo" src="img/inicio/logo.PNG" width="100" height="78.99"></li>
+          <li><a href="crear.html">Creador</a></li>
+          <li><a href="inicio.html">Sing-Up</a></li>
+        </ul>
+    </nav>
 
-            #almacenaje{
-                width: 800px;
-                margin: auto;
-            }
 
-        </style>
+    <!-- CONTENT
+=============================== -->
 
-    </head>
+          
 
     <body>
     <div id="almacenaje">
     <div class="contenedor" id="contenedor1">
-    
+    <br>
     <textarea class="paquete" draggable="false" id="caja1" name="Nombre" required placeholder="Nombre Plan" ondragstart="dragstart(this, event)"></textarea>
     <textarea class="paquete" draggable="false" id="caja2" name="Descripcion" required placeholder="Descripción Plan" ondragstart="dragstart(this, event)"></textarea>
     <textarea class="paquete" draggable="false" id="caja3" name="Localizacion" required placeholder="Localización" ondragstart="dragstart(this, event)"></textarea>
@@ -126,12 +85,12 @@
 </div>
     <!-- contenedor -->
     <div class="contenedor" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false"> <span>Contenedor</span>
-        <form action="" method="post" id="formulario"><button>Sesión</button></form>
+        <form action="" method="post" id="formulario"><button>Crear Plan</button></form>
 </br>
 
     </div>
 </div>
-    <button onclick="draguear()">Compactar</button>
+    <button onclick="draguear()">Compactar Cajas</button>
         <script>
 
             function dragstart(caja, evento) {
