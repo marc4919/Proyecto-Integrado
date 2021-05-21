@@ -177,7 +177,6 @@ h2{
 @media screen and (max-width: 640px){
 
 	.menu{
-		display: inline-flex;
 		margin: 0 auto;
 		display: inline-flex;
     }
