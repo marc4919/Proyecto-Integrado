@@ -1,4 +1,15 @@
-
+<?php
+session_start();
+if (!isset($_SESSION['Usuario'])){ //Inicializamos la variable de sesion para accdeer
+    echo ' 
+    <script> 
+    alert("Debes iniciar sesion para acceder")
+    </script>
+    ';
+    session_destroy(); //Nos destruye la sesion 
+    header("location: ../public/register-log.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +41,7 @@
             </button>
               <div class="dropdown-content">
                       <a href="user.php"><span>Settings</span></a>
-                      <a href="inicio.php"><span>Sing-Out</span></a>
+                      <a href="../src/cerrarSesion.php"><span>Sing-Out</span></a>
                 </div>
               </li>
             </ul>
@@ -59,7 +70,7 @@
 
         <!-- Imagenes Derecha -->
 
-        <a href="gallery-plans.html" class="card">
+        <a href="" class="card">
           <div class="img">
             <div class="imagenes">
             <img class="img1" id="img-1" src="img/inicio/img1.png">

@@ -1,9 +1,17 @@
-
 <?php
-require_once "autoloader.php";
+
 session_start();
-$obje = new UserAdmin();
+if (!isset($_SESSION['Usuario'])){ //Inicializamos la variable de sesion para accdeer
+    echo ' 
+    <script> 
+    alert("Debes iniciar sesion para acceder")
+    </script>
+    ';
+    session_destroy(); //Nos destruye la sesion 
+}
+header("location: ../public/register-log.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +43,7 @@ $obje = new UserAdmin();
               </button>
                 <div class="dropdown-content">
                         <a href="user.php"><span class="span1">Settings</span></a>
-                        <a href="/Planme/src/cerrarSeson.php"><span class="span1">Sing-Out</span></a>
+                        <a href="../src/cerrarSesion.php"><span class="span1">Sing-Out</span></a>
                   </div>
                 </li>
               </ul>

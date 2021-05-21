@@ -1,13 +1,3 @@
-<?php
-
-session_start();
-
-if (isset($_SESSION['Nombre'])) {
-  header("location: ../public/selecciona.php");
-}  //Si existe la sesion usuario o ya esta iniciada me va a redirigir a la pagina
-
-?>
-
 
 <!DOCTYPE html>
 <html lang="en">

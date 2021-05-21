@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+if (!isset($_SESSION['Usuario'])){ //Inicializamos la variable de sesion para accdeer
+    echo ' 
+    <script> 
+    alert("Debes iniciar sesion para acceder")
+    </script>
+    ';
+    session_destroy(); //Nos destruye la sesion 
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +41,7 @@
           </button>
             <div class="dropdown-content">
                     <a href="user.php"><span class="span1">Settings</span></a>
-                    <a href="inicio.php"><span class="span1">Sing-Out</span></a>
+                    <a href="../src/cerrarSesion.php"><span class="span1">Sing-Out</span></a>
               </div>
             </li>
           </ul>
@@ -46,7 +59,7 @@
       <div class="text">
         <h1 class="title">Crea tus planes</h1>
         <p class="desc"><br><br>Crea tus propios planes, y crece <br>en nuestra comunidad.<br>La imaginación no tiene limite.</p>
-        <a href="crear.html"><button class="button">Crear Plan</button></a>
+        <a href="crear.php"><button class="button">Crear Plan</button></a>
       </div>
     </div>
     <div class="split right">
@@ -54,12 +67,12 @@
       <div class="text">
         <h1 class="title">Elige un plan</h1>
         <p class="desc"><br><br>Puedes seleccionar entre uno de nuestros<br> planes, contamos con mas de 100 planes<br> predeterminados.</p>
-        <a href="gallery-plans.html"><button class="button">Seleccionar Plan</button></a>
+        <a href="gallery-plans.php"><button class="button">Seleccionar Plan</button></a>
       </div>
     </div>
   </div>
-  <a href="crear.html"><button class="button1">Crear Plan</button></a>  
-  <a href="gallery-plans.html"><button class="button2">Seleccionar Plan</button></a>
+  <a href="crear.php"><button class="button1">Crear Plan</button></a>  
+  <a href="gallery-plans.php"><button class="button2">Seleccionar Plan</button></a>
 
 
 
