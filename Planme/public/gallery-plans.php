@@ -162,9 +162,25 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
     <div id="caja6"></div>
   </div>
 
+  <div class="popup-wrapper">
+    <div class="popup">
+      <div class="popup-close">x</div>
+      <div class="popup-content">
+
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- JS
 =============================== -->
   <script src="js/gallery-plans.js"></script>
+
+
+  <script>
+
+  </script>
 
 </body>
 

@@ -38,7 +38,7 @@ class Register extends User
             echo "</br>";
             echo $sql;
             $this->conn->query($sql);
-            header("location: selecciona.html");
+            header("location: selecciona.php");
         }
     }
 }

@@ -80,9 +80,37 @@ function botonGuardar() {
       e.preventDefault();
       e.stopPropagation();
       let identificador = idPlan[i].innerHTML;
-      guardar(identificador);
+      //guardar(identificador);
+
+      const popup = document.getElementsByClassName("popup-wrapper");
+      const close = document.getElementsByClassName("popup-close");
+      popup[0].style.display = "block";
+      close[0].addEventListener("click", () => {
+        popup[0].style.display = "none";
+      });
+
+      popup[0].addEventListener("click", (e) => {
+        // console.log(e);
+        if (e.target.className === "popup-wrapper") {
+          popup[0].style.display = "none";
+        }
+      });
+
+      detalle(identificador);
     });
   }
+}
+
+function detalle(identificador) {
+  contenido = document.getElementsByClassName("popup-content");
+  const xhttp = new XMLHttpRequest();
+  xhttp.addEventListener("readystatechange", function () {
+    if (this.readyState == 4 && this.status == 200) {
+      contenido[0].innerHTML = xhttp.responseText;
+    }
+  });
+  xhttp.open("GET", "detallePlan.php?id=" + identificador, true);
+  xhttp.send();
 }
 
 function guardar(identificador) {
@@ -115,6 +143,7 @@ function formularPrecio(formData) {
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
       caja.innerHTML = xhttp.responseText;
+      botonGuardar();
     }
   });
   xhttp.open("POST", "filtroPrecio.php", true);
@@ -127,6 +156,7 @@ function formularTransporte(formData) {
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
       caja.innerHTML = xhttp.responseText;
+      botonGuardar();
     }
   });
   xhttp.open("POST", "filtroTransporte.php", true);
@@ -139,6 +169,7 @@ function formularCategoria(formData) {
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
       caja.innerHTML = xhttp.responseText;
+      botonGuardar();
     }
   });
   xhttp.open("POST", "filtroCategoria1.php", true);
@@ -151,6 +182,7 @@ function formularCompleto(formData) {
   xhttp.addEventListener("readystatechange", function () {
     if (this.readyState == 4 && this.status == 200) {
       caja.innerHTML = xhttp.responseText;
+      botonGuardar();
     }
   });
   xhttp.open("POST", "filtroCompleto.php", true);
