@@ -35,7 +35,7 @@ $prueba = new Admin();
 								<div>
 									<i></i>
 								</div>
-								<span>Logout</span>
+								<span>Sign-Out</span>
 							</a>
 						</li>
 					</ul>

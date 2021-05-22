@@ -262,15 +262,15 @@ h2 {
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height: 40px;
-    min-height: 40px;
-  }
+    display: none;
+  } 
   .content {
     height: 30vh;
   }
   h1 {
     font-size: 24px;
   }
+ 
 }
 
 #icon {
@@ -286,7 +286,6 @@ h2 {
   border: 1px solid #d02718;
   display: inline;
   cursor: pointer;
-  color: #ffffff;
   font-family: Arial;
   font-size: 17px;
   padding: 7px 25px;
@@ -329,3 +328,4 @@ h2 {
   position: relative;
   top: 1px;
 }
+
