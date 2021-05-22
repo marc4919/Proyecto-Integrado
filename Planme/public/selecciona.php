@@ -59,7 +59,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
       <div class="text">
         <h1 class="title">Crea tus planes</h1>
         <p class="desc"><br><br>Crea tus propios planes, y crece <br>en nuestra comunidad.<br>La imaginación no tiene limite.</p>
-        <a href="crear.html"><button class="button">Crear Plan</button></a>
+        <a href="crear.php"><button class="button">Crear Plan</button></a>
       </div>
     </div>
     <div class="split right">
