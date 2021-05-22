@@ -15,12 +15,4 @@
         $this->Nombre = $Nombre;
         $this->Tipo = $Tipo;
     }
-
-    public function Cambiar_Nombre()
-    {
-    }
-
-    public function Cambiar_Correo()
-    {
-    }
 }
