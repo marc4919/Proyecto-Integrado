@@ -24,7 +24,7 @@ $obje = new UserAdmin();
       <li><a href="inicio-user.php">Inicio</a></li>
       <li><a href="gallery-plans.php">Galeria</a></li>
       <li><img class="logo" src="img/inicio/logo.png"></li>
-      <li><a href="crear.html">Creador</a></li>
+      <li><a href="crear.php">Creador</a></li>
       <li>
         <div class="dropdown">
           <ul>
