@@ -46,10 +46,10 @@ $obje = new UserAdmin();
 =============================== -->
 
   <span class="caja"><img class="perfil-img" src="img/user-page/perfil.png"></span>
-  <span class="caja">
-    <h2 class="perfil-nombre"><?php echo $_SESSION['NombreUsuario']; ?></h2>
+  <span class="caja" id="titulo">
+    <h1 class="perfil-nombre" id="nmombreUser"><?php echo $_SESSION['NombreUsuario']; ?></h1>
   </span>
-  <a href="" class="ajustes"></a><button id="ajustes">Ajustes</button></a>
+  <a href="" class="ajustes"></a><button id="ajustes"><img src="img/user-page/settings.png" width="30px" height="30px"></button></a>
 
 
 

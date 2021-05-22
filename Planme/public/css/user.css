@@ -11,6 +11,10 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   font-family: "Poppins", sans-serif;
+  background-image: url("https://c.wallhere.com/photos/48/60/sunset_valencia_lago_agua_nubes_albufera-547962.jpg!d");
+  background-size:cover;
+  background-attachment: fixed;
+  
 }
 
 /* NAVBAR
@@ -99,7 +103,10 @@ body {
 }
 button {
   border: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+nav{
+  background-color: rgba(255, 255, 255, 0.472);;
 }
 
 /* CONTENT
@@ -149,6 +156,7 @@ button {
   border: 1px solid #ccc;
   margin-left: 10%;
   margin-right: 10%;
+  background-color: rgba(255, 255, 255, 0.486);
 }
 
 .cajaGuardados {
@@ -266,4 +274,16 @@ h1 {
 
 .ajustes{
   font-size: large;
+  margin-bottom: 4px;
+  margin-right: 3px;
+}
+.perfil-nombre{
+  margin-top: -50px;
+}
+
+#nmombreUser{
+  margin-right: 4px;
+  font-size: 40px;
+  margin-left: -100px;
+
 }
