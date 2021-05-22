@@ -106,7 +106,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
     </div>
     <!-- contenedor -->
     <div class="contenedor" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false">
-      <form action="" method="post" id="formulario"><a href="#" class="myButton">
+      <form action="" method="post" id="formulario"><a href="opciones.html" class="myButton">
           <button>Crear Plan</button>
         </a></form>
       </br>
