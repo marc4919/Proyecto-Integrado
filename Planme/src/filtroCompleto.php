@@ -30,6 +30,7 @@ class filtroCompleto extends Plan
             while ($row = $result->fetch_assoc()) {
                 echo "<div class= 'cajaPlan'>";
                 echo "<div class= 'card'>";
+                echo "<p hidden class= 'idPlan'>" . $row["ID_PLAN"] . "</p>";
                 echo "<img class='img' id='img-1' src='img/gallery-plans/circulo.png'>";
                 echo "<div class='planname'><h1>" . $row["Nombre"] . "</h1></div>";
                 echo "<div class='plandesdatos'>" . $row["Transporte"] . "</div>";

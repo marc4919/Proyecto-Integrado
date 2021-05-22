@@ -19,7 +19,6 @@ class galleryPlan extends Plan
 
     public function showPlans()
     {
-        // AÑADIR UN REINICIO DE ARRAY CUANDO ESTÁN TODOS GUARDADOS --
 
         $result = $this->getPlans();
         if ($result->num_rows > 0) {
@@ -42,31 +41,6 @@ class galleryPlan extends Plan
             array_push($_SESSION['PlanesMostrados'], 0);
             $this->showPlans();
         }
-        // HABRÍA QUE HACER OTRO MÉTODO PARA ESTO RETURNEANDO EL ARRAY $planesAparecidos --- MGT
-        /* for ($i = 0; $i <= 5; $i++) {
-            $result = $this->getPlans();
-            if ($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    if (in_array($row["Nombre"], $planesAparecidos)) {
-                        $i--;
-                    } else {
-
-                        echo "<div>";
-                        echo "<p>" . $row["Nombre"] . "</p>";
-                        //echo "<p>" . $row["Descripcion"] . "</p>";
-                        echo "<p>" . $row["Localizacion"] . "</p>";
-                        echo "<p>" . $row["Transporte"] . "</p>";
-                        //echo "<p>" . $row["Categoria_Principal"] . "</p>";
-                        //echo "<p>" . $row["Categoria_Secundaria"] . "</p>";
-                        echo "<p>" . $this->formatoMoneda($row["Precio"]) . "</p>";
-                        echo "</div>";
-                        array_push($planesAparecidos, $row["Nombre"]);
-                    }
-                }
-            } else {
-                echo "no hay resultados";
-            }
-        } */
     }
 
 
@@ -79,22 +53,26 @@ class galleryPlan extends Plan
         $this->conn->query($sql);
     }
 
-    /**
-     * Get the value of planesAparecidos
-     */
-    public function getPlanesAparecidos()
+    public function detallePlan($id)
     {
-        echo $this->planesAparecidos;
+
+        $sql = "SELECT * from planes WHERE ID_PLAN = " . $id;
+        echo "</br>";
+        echo $sql;
+        $this->conn->query($sql);
+        return $this->conn->query($sql);
     }
 
-    /**
-     * Set the value of planesAparecidos
-     *
-     * @return  self
-     */
-    public function putInArray($plan)
+    public function showDetalle($id)
     {
-        array_push($this->planesAparecidos, $plan);
-        return $this;
+        $result = $this->detallePlan($id);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='planname'><h1>" . $row["Nombre"] . "</h1></div>";
+                echo "<div class='plandesdatos'>" . $row["Transporte"] . "</div>";
+                echo "<div class='plandesdatos'>" . Staticos::formatoMoneda($row["Precio"]) . "</div>";
+                echo "<div class='plandescription'>" . $row["Descripcion"] . "</div>";
+            }
+        }
     }
 }
