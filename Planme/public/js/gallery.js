@@ -54,6 +54,7 @@ function main() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       gP.innerHTML = xhttp.responseText;
       botonGuardar();
+      botonPlanme();
       refresh();
     }
   });
@@ -111,6 +112,22 @@ function detalle(identificador) {
   });
   xhttp.open("GET", "detallePlan.php?id=" + identificador, true);
   xhttp.send();
+}
+
+function botonPlanme() {
+  let boton = document.getElementsByClassName("guardar");
+  let idPlan = document.getElementsByClassName("idPlan");
+  let cajaPlan = document.getElementsByClassName("cajaPlan");
+  for (let i = 0; i < idPlan.length; i++) {
+    boton[i].addEventListener("click", function (e) {
+      console.log(20);
+      e.preventDefault();
+      e.stopPropagation();
+      let identificador = idPlan[i].innerHTML;
+      cajaPlan[i].style.display = "none";
+      guardar(identificador);
+    });
+  }
 }
 
 function guardar(identificador) {

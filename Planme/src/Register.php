@@ -38,6 +38,17 @@ class Register extends User
             echo "</br>";
             echo $sql;
             $this->conn->query($sql);
+
+            $verificacion = "SELECT * FROM usuario where Correo='$correo' or Nombre='$Nombre'";
+            $Consulta = $this->conn->query($verificacion);
+            while ($row = $Consulta->fetch_assoc()) { {
+                    session_start();
+                    $_SESSION['Usuario'] = $row["ID_Usuario"];
+                    $_SESSION['NombreUsuario'] = $row["Nombre"];
+                    $_SESSION['PlanesMostrados'] = [];
+                    array_push($_SESSION['PlanesMostrados'], 0);
+                }
+            }
             header("location: selecciona.php");
         }
     }
