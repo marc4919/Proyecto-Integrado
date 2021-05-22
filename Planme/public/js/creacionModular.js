@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       let formElement = document.getElementById("formulario");
       let formData = new FormData(formElement);
+      console.log("fiesta");
       formular(formData);
     });
 });
