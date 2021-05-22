@@ -22,7 +22,7 @@ class galleryPlan extends Plan
 
         $result = $this->getPlans();
         if ($result->num_rows > 0) {
-            echo "<button id='Borrado'>Refresh</button>";
+            echo "<img src='img/user-page/refresh.png' width='30px' height='30px' id='Borrado'></i>";
             while ($row = $result->fetch_assoc()) {
                 echo "<div class= 'cajaPlan'>";
                 echo "<div class= 'card'>";
