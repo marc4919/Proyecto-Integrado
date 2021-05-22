@@ -22,6 +22,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
   <title>Plan-Me</title>
   <link rel="stylesheet" href="css/gallery-plans.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="js/gallery.js"></script>
   <link rel="shortcut icon" href="img/inicio/logo.png">
   <title>Plan-Me | Galeria Planes</title>

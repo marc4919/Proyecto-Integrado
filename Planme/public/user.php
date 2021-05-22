@@ -32,7 +32,7 @@ $obje = new UserAdmin();
               <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-              <a href="inicio.php"><span>Sing-Out</span></a>
+              <a href="inicio.php"><span>Sign-Out</span></a>
             </div>
       </li>
     </ul>
@@ -49,7 +49,7 @@ $obje = new UserAdmin();
   <span class="caja">
     <h2 class="perfil-nombre"><?php echo $_SESSION['NombreUsuario']; ?></h2>
   </span>
-  <button id="ajustes"> Ajustes</button>
+  <a href="" class="ajustes"></a><button id="ajustes">Ajustes</button></a>
 
 
 
