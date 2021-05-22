@@ -11,6 +11,7 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   font-family: "Poppins", sans-serif;
+  background-image: url("https://wallpaperaccess.com/full/1612457.jpg");
 }
 
 /* NAVBAR
@@ -19,12 +20,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 720px;
+  max-width: auto;
   margin: 0 auto;
   height: 100px;
   list-style: none;
   font-size: 23px;
   margin-bottom: 2%;
+  background-color: rgba(255, 255, 255, 0.712);
 }
 
 .menu li a {
@@ -49,6 +51,7 @@ body {
   height: 100px;
   padding: 10px;
 }
+
 .dropdown {
   float: right;
   margin-right: 30px;
@@ -98,7 +101,7 @@ body {
 }
 button {
   border: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
 }
 a .span1 {
   font-size: 23px;
@@ -139,6 +142,7 @@ a .span1 {
   border: 1px solid #ccc;
   margin-left: 10%;
   margin-right: 10%;
+  background-color: rgba(255, 255, 255, 0.719)
 }
 
 .cajaGuardados {
