@@ -13,6 +13,7 @@ body {
   font-family: "Poppins", sans-serif;
   background-image: url("https://wallpaperaccess.com/full/1612457.jpg");
   background-attachment: fixed;
+  background-size:cover
 }
 
 /* NAVBAR
