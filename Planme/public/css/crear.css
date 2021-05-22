@@ -214,7 +214,7 @@ h2 {
   height: 150vh;
   margin-bottom: -7px; /*Fix for safari gap*/
   min-height: 100px;
-  max-height: 200px;
+  max-height: 125px;
 }
 
 .content {
@@ -317,8 +317,8 @@ h2 {
   padding: 7px 25px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #e1e2ed;
-  margin-left: 1137px;
-  margin-top: 100px;
+  margin-left: 900px;
+  margin-top: 20px;
 }
 .myButton2:hover {
   background: linear-gradient(to bottom, #ec0b0b 5%, #ededed 100%);
