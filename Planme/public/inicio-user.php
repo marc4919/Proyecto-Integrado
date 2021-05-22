@@ -33,7 +33,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
       <li><a href="inicio-user.php">Inicio</a></li>
       <li><a href="gallery-plans.php">Galeria</a></li>
       <li><img class="logo" src="img/inicio/logo.png" width="100" height="78.99"></li>
-      <li><a href="crear.html">Creador</a></li>
+      <li><a href="crear.php">Creador</a></li>
       <li>
         <div class="dropdown">
           <ul>
