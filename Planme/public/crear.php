@@ -40,7 +40,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
             </button>
             <div class="dropdown-content">
               <a href="user.php"><span class="span1">Perfil</span></a>
-              <a href="../src/cerrarSesion.php"><span class="span1">Sing-Out</span></a>
+              <a href="../src/cerrarSesion.php"><span class="span1">Sign-Out</span></a>
             </div>
       </li>
     </ul>
