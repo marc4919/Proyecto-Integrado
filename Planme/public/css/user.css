@@ -11,6 +11,11 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   font-family: "Poppins", sans-serif;
+  background-image: linear-gradient( 65.9deg,  rgba(85,228,224,1) 5.5%, rgba(75,68,224,0.74) 54.2%, rgba(64,198,238,1) 55.2%, rgba(177,36,224,1) 98.4% );
+  
+  
+  background-attachment: fixed;
+  
 }
 
 /* NAVBAR
@@ -99,7 +104,10 @@ body {
 }
 button {
   border: none;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0);
+}
+nav{
+  background-color: rgba(255, 255, 255, 0.781);;
 }
 
 /* CONTENT

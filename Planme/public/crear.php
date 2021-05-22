@@ -52,7 +52,7 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
   <h2>BIENVENIDO A NUESTRO CREADOR</h2>
   <div id="almacenaje">
     <div class="contenedor" id="contenedor1">
-    <a href="#" class="myButton2"><button onclick="draguear()">Compactar</button></a>
+    <button class="boton1" onclick="draguear()">Compactar</button>
       <textarea class="paquete" draggable="false" id="caja1" name="Nombre" required placeholder="Nombre Plan" ondragstart="dragstart(this, event)"></textarea>
       <textarea class="paquete" draggable="false" id="caja2" name="Descripcion" required placeholder="Descripción Plan" ondragstart="dragstart(this, event)"></textarea>
       <textarea class="paquete" draggable="false" id="caja3" name="Localizacion" required placeholder="Localización" ondragstart="dragstart(this, event)"></textarea>
@@ -106,9 +106,9 @@ if (!isset($_SESSION['Usuario'])) { //Inicializamos la variable de sesion para a
     </div>
     <!-- contenedor -->
     <div class="contenedor" id="contenedor" ondrop="drop(this, event)" ondragenter="return false" ondragover="return false">
-      <form action="" method="post" id="formulario"><a href="opciones.html" class="myButton">
-          <button>Crear Plan</button>
-        </a></form>
+      <form action="" method="post" id="formulario">
+          <button class="boton2">Crear Plan</button>
+        </form>
       </br>
 
     </div>
