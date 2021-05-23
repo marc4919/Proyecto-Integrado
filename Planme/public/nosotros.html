@@ -13,7 +13,7 @@
     <nav>
         <ul class="menu">
             <li><a href="inicio.php">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
+            <li id="Traducir"><a>In English</a></li>
             <li><img class="logo" src="img/inicio/logo.png" width="100" height="78.99"></li>
             <li><a href="faq.html">Faq</a></li>
             <li><a href="register-log.php">Login</a></li>
@@ -52,5 +52,22 @@
                 </a>
             </div>
         </div>
+
+        <script>
+            let traduccion = document.getElementById("Traducir");
+             traduccion.addEventListener("click", english);
+            function english() {
+             if(traduccion.innerHTML=="<a>In English</a>"){
+             box = document.getElementsByClassName("box");
+             box[0].innerHTML = "<h2>WE STARTED IN BOREDOM</h2><p>One of the objectives of our website is to contribute to tourism that has been greatly affected by the pandemic. Due to the pandemic, we live in a time where it is difficult to make a good meeting because there are many restrictions.</p><h2>WE STARTED IN LOVE WITH THE GOOD PLANS</h2><p>We want people to have a quick solution to their problems like meeting their friends or have fun. </p> <p> Thanks to our website we will have a large number of plans which will adjust to the tastes of most users.</p>";
+             traduccion.innerHTML = "<a>Castellano</a>";
+             }else{
+                 box = document.getElementsByClassName("box");
+             box[0].innerHTML = "<h2>NACIMOS DEL ABURRIMIENTO</h2><p>Uno de los objetivos de nuestra web es contribuir al turismo ya que se ha visto bastante afectada por la pandemia.Actualmente debido a la pandemia,vivimos en un momento donde es complicado realizar una buena quedada ya que hay muchas restricciones.</p><h2>NACIDOS DEL AMOR A LOS BUENOS PLANES</h2><p>Tambien queremos que la gente tenga una solucion rapida a sus problemas de diversion como realizar una quedada con sus amigos.</p> <p>Gracias a nuestra web dispondremos de una gran cantidad de planes los cuales se ajustaran a los gustos de la mayoria de usuarios.</p>";
+             traduccion.innerHTML = "<a>In English</a>";
+            }
+         }
+         </script>
+
 </body>
 </html>

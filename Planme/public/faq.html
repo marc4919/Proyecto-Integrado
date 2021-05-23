@@ -15,7 +15,7 @@
             <li><a href="inicio.php">Inicio</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><img class="logo" src="img/inicio/logo.png" width="100" height="78.99"></li>
-            <li><a href="faq.html">Faq</a></li>
+            <li id="Traducir"><a>In English</a></li>
             <li><a href="register-log.php">Login</a></li>
         </ul>
       </nav>
@@ -57,5 +57,21 @@
                 </a>
             </div>
         </div>
+       
+        <script>
+           let traduccion = document.getElementById("Traducir");
+            traduccion.addEventListener("click", english);
+           function english() {
+            if(traduccion.innerHTML=="<a>In English</a>"){
+            box = document.getElementsByClassName("box");
+            box[0].innerHTML = "<h2>Frequently asked questions</h2> <ol> <li><h4>How can I create a plan?</h4> <p>-To create a plan, you must access the plan creator, complete all the blocks and submit them.</p></li> <li><h4>How many plans can I create?</h4> <p>-The limit is your imagination.</p></li> <li><h4>What can I find in my profile?</h4> <p>-In your profile you can find those plans that you have created or that you have saved in the gallery.</p></li> <li><h4>How many predetermined plans do I have?</h4> <p>-Not including plans created by users, our app has 100 default plans.</p></li> <li><h4>Can I delete a plan?</h4> <p>-Not yet. We are working on it.</p></li><li><h4>Is there any kind of restriction to name a plan?</h4><p>-We don't have a filter yet, we encourage you to use appropriate language all the times.</p></li></ol>";
+            traduccion.innerHTML = "<a>Castellano</a>";
+            }else{
+                box = document.getElementsByClassName("box");
+            box[0].innerHTML = "<h2>Preguntas Frecuentes</h2> <ol> <li><h4>¿Como puedo crear un plan?</h4> <p>-Para crear un plan,debes acceder al creador de planes,completar todos los bloques y enviarlos.</p></li> <li><h4>¿Cuantos planes puedo crear?</h4> <p>-El limite es tu imaginación.</p></li> <li><h4>¿Que puedo encontrar en mi perfil?</h4> <p>-En tu perfil puedes encontrar aquellos planes que hayas creado o que hayas guardado en la galeria.</p></li> <li><h4>¿De cuantos planes predeterminados dispongo?</h4> <p>-Sin incluir los planes creados por los usuarios, nuestra app dispone de 100 planes predeterminados.</p></li> <li><h4>¿Puedo eliminar algun plan que haya hecho y no haya gustado?</h4> <p>-Todavía no.</p></li><li><h4>¿Exisiste algun tipo de restriccion para nombrar un plan?</h4><p>-Puesto que todavía no tenemos un filtro te animamos a que uses un lenguaje apropiado en todo momento</p></li></ol>";
+            traduccion.innerHTML = "<a>In English</a>";
+           }
+        }
+        </script>
 </body>
 </html>
