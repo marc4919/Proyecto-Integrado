@@ -46,17 +46,11 @@
                 echo "<div class='planname'><h1>" . $row["Nombre"] . "</h1></div>";
                 echo "<div class='plandesdatos'>" . $row["Descripcion"] . "</div>";
                 echo "<div class='plandesdatos'>" . Staticos::formatoMoneda($row["Precio"]) . "</div>";
-                //echo "<div class='plandescription'>" . $row["Descripcion"] . "</div>";
                 echo "</div>";
                 echo "</div>";
             }
         } else {
             echo "no hay resultados";
         }
-    }
-
-
-    public function updateUser() // CAMBIAR MÉTODO A OTRA CLASE
-    {
     }
 }

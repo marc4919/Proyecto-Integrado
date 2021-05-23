@@ -32,7 +32,6 @@ class galleryPlan extends Plan
                 echo "<div class='plandesdatos'>" . $row["Transporte"] . "</div>";
                 echo "<div class='plandesdatos'>" . Staticos::formatoMoneda($row["Precio"]) . "</div>";
                 echo "<button id='guardar' class='guardar'>planme</button>";
-                //echo "<div class='plandescription'>" . $row["Descripcion"] . "</div>";
                 echo "</div>";
                 echo "</div>";
                 array_push($_SESSION['PlanesMostrados'], $row['ID_PLAN']);

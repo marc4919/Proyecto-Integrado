@@ -29,7 +29,7 @@ class Login extends User
                         }
                     }
                 }
-                //Si necuentra al usuario accde a la web 
+
                 echo
                 '<script>
                 alert("Ha iniciado sesion");
@@ -37,7 +37,7 @@ class Login extends User
                  </script>
                 ';
             }
-        } else { //Si no lo encuantra vuelve a la pagina donde se inicia sesion 
+        } else {
             echo
             '<script>
                 alert("SU USUARIO NO EXISTE, COMPRUEBE LOS DATOS INTRODUCIDOS"); 
@@ -46,26 +46,5 @@ class Login extends User
                 ';
             exit();
         }
-
-
-        /*if ($Consulta->num_rows > 0) {
-                while ($row = $Consulta->fetch_assoc()) { {
-                        $_SESSION['Correo'] = $Correo;
-                        $_SESSION['Usuario'] = $row["ID_Usuario"];
-                        $_SESSION['PlanesMostrados'] = [];
-                        array_push($_SESSION['PlanesMostrados'], 0);
-                    }
-                    //Variable de session para que se quede almacenada en la caché 
-                    //Si necuentra al usuario accde a la web 
-                    echo
-                    '<script>
-                            alert("Ha iniciado sesion");
-                            window.location= "../public/selecciona.html";
-                        </script>
-                    '; 
-                    }
-                }
-            } else {
-                echo "no hay resultados"; */
     }
 }

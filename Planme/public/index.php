@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_destroy();?>
+session_destroy(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +20,7 @@ session_destroy();?>
   =============================== -->
   <nav class="flex juntify-center md:justify-end">
     <ul class="menu">
-      <li><a href="inicio.php">Inicio</a></li>
+      <li><a href="index.php">Inicio</a></li>
       <li><a href="nosotros.html">Nosotros</a></li>
       <li><img class="logo" src="img/inicio/logo.png" width="100" height="78.99"></li>
       <li><a href="faq.html">Faq</a></li>
