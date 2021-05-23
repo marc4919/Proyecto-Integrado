@@ -1,5 +1,6 @@
 /* GENERAL
 =========================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100;1,400&display=swap');
 * {
   padding: 0;
   margin: 0;
@@ -43,7 +44,7 @@ body {
 }
 
 .menu li a:hover {
-  color: rgb(173, 27, 27);
+  color: rgb(216, 63, 63);
   cursor: pointer;
   font-size: 25px;
 }
@@ -131,11 +132,11 @@ a .span1 {
 }
 
 .tab button:hover {
-  background-color: rgba(138, 18, 18, 0.795);
+  background-color: rgba(231, 53, 53, 0.795);
 }
 
 .tab button.active {
-  background-color: rgba(138, 18, 18, 0.795);
+  background-color: rgba(221, 50, 50, 0.795);
 }
 
 .tabcontent {
@@ -244,6 +245,7 @@ h1 {
 #Borrado {
   display: block;
 }
+
 
 .form-element #rangeValue {
   margin-bottom: -10px;
